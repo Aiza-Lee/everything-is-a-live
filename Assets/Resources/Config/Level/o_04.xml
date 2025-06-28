@@ -4,10 +4,10 @@
 	<Width>22</Width>
 	<Mechanism>
 		<GID>01</GID>
-		<ID>monitor_2</ID>
-		<GridPosition x="2" y="3" />
+		<ID>bin</ID>
+		<GridPosition x="3" y="2" />
 		<!--默认机关都是朝上的，匹配在机关配置中写的检测范围，这里的旋转就是初始化关卡调整朝向用的-->
-		<InitRotate>S</InitRotate>
+		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
 	<Mechanism>
