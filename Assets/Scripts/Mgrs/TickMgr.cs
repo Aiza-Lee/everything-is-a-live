@@ -19,6 +19,13 @@ namespace GameLogic {
 			if (GameMgr.Inst.CheckGameOver()) {
 				GlobalMgr.Inst.LevelOver();
 			}
+			foreach (var entity in GameMgr.Inst.Grid.Entities_ReadOnly.Values) {
+				if (entity is IMechanism mechanism) {
+					if (!GameMgr.Inst.Grid.IsWalkable(mechanism.Position)) {
+						mechanism.TriggerFunc();
+					}
+				}
+			}
 			AfterTick?.Invoke();
 		}
 	}
