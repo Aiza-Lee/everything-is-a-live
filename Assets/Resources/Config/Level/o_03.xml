@@ -94,7 +94,7 @@
 				</DetectRange>
 				<Action>
 				<MoveLogic>U,U,U,U</MoveLogic>
-				<RotateLogic>0,0,0,X</RotateLogic>
+				<RotateLogic>X,0,0,0</RotateLogic>
 			    </Action>
 				<Jump>
 					<Wait>4</Wait>
@@ -167,6 +167,13 @@
 		<GID>15</GID>
 		<ID>water_dispenser</ID>
 		<GridPosition x="6" y="9"/>
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>16</GID>
+		<ID>bin</ID>
+		<GridPosition x="14" y="4"/>
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
