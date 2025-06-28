@@ -4,7 +4,7 @@
 	<Width>16</Width>
 	<Mechanism>
 		<GID>01</GID>
-		<ID>m_001</ID>
+		<ID>monitor_1</ID>
 		<GridPosition x="8" y="7" />
 		<!--默认机关都是朝上的，匹配在机关配置中写的检测范围，这里的旋转就是初始化关卡调整朝向用的-->
 		<InitRotate>X</InitRotate>

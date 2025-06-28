@@ -1,6 +1,6 @@
 <Mechanism>
 	<!--需要唯一ID，不一定是这个格式-->
-	<ID>m_001</ID>
+	<ID>monitor_1</ID>
 	<Name>监控a</Name>
 	<!--是否阻碍玩家运动-->
 	<IsBlock>false</IsBlock>
