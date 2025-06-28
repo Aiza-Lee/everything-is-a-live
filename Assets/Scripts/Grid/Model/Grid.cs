@@ -21,7 +21,8 @@ namespace GameLogic {
 			player = new Player();
 			_entities = new Dictionary<string, IEntity>();
 			/* CSV_INFO */
-			var rows = csvMap.Split('\n');
+			var rows = csvMap.Trim().Split('\n');
+			Array.Reverse(rows);
 			var visited = MarkEnclosedArea(rows);
 			for (int y = 0; y < Height; y++) {
 				var row = rows[y].Trim().Split(',');
@@ -78,6 +79,7 @@ namespace GameLogic {
 			}
 			foreach (var entity in _entities.Values) {
 				if (entity is IMechanism mechanism) {
+					if (!mechanism.RangeActive) continue;
 					var origin = mechanism.Position;
 					foreach (var offset in mechanism.DetectRange.Positions) {
 						var target = origin + offset;

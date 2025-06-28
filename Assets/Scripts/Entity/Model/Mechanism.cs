@@ -1,11 +1,11 @@
 using System;
 using System.Xml;
-using NUnit.Framework;
 using UnityEngine;
 
 namespace GameLogic {
 	public class Mechanism : IMechanism {
 		public Range DetectRange { get; private set; } = new();
+		public bool RangeActive { get; private set; }
 		public Direction CurDrct { get; set; }
 
 		public bool IsBlock { get; private set; }
@@ -42,8 +42,8 @@ namespace GameLogic {
 				}
 			}
 
-			Rotate(initRotate);
 			DetectRange = new(_config.MechanismLevels[_curLevel].DetectRange);
+			Rotate(initRotate);
 		}
 		/// <summary>
 		/// 加载默认配置
@@ -127,6 +127,12 @@ namespace GameLogic {
 			_moveCnt++;
 			if (_moveCnt >= levelConfig.MoveActions.Count) { _moveCnt = 0; }
 
+			var detectAction = levelConfig.DetectActions[_detectCnt];
+			RangeActive = detectAction;
+			_detectCnt++;
+			if (_detectCnt >= levelConfig.DetectActions.Count) { _detectCnt = 0; }
+
+
 			if (levelConfig.IsJump) {
 				++_waitCnt;
 				if (_waitCnt >= levelConfig.Jump_Param_Wait) {
@@ -151,6 +157,7 @@ namespace GameLogic {
 
 		private int _rotateCnt;
 		private int _waitCnt;
+		private int _detectCnt;
 		private int _moveCnt;
 		private string _curLevel = "1";
 		private MechanismConfig _config;

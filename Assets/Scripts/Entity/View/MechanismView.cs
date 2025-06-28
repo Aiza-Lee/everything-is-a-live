@@ -1,3 +1,4 @@
+using NSFrame;
 using UnityEngine;
 
 namespace GameLogic {
@@ -42,6 +43,7 @@ namespace GameLogic {
 				mechanism.OnPositionChanged -= OnMechanismPositionChanged;
 			}
 			Entity = null;
+			PoolSystem.PushGO(this.gameObject);
 		}
 	}
 }

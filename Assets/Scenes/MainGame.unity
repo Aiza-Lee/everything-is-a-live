@@ -166,8 +166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mechanismSprites:
-  - Key: 
-    Value: {fileID: 0}
+  - Key: temp
+    Value: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   _mechanismAnimators:
   - Key: 
     Value: {fileID: 0}
@@ -175,6 +175,7 @@ MonoBehaviour:
   _playerPrefab: {fileID: 80217376791503178, guid: 36504430cd29cfa4f9ca07a6520f3e7f, type: 3}
   _groundPrefab: {fileID: 8462526493887104753, guid: 0d74b3aa7e567cf4a8e46d4f9dd3058d, type: 3}
   _lightCellPrefab: {fileID: 7829480187520219403, guid: 726752c5c285e6d4da226e0f516b080d, type: 3}
+  _terminalPrefab: {fileID: 7829480187520219403, guid: 987aff4c42319c74eba6139a5c3f5753, type: 3}
 --- !u!114 &52017104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +191,7 @@ MonoBehaviour:
   _levelNames:
   - o_01
   - o_02
+  - o_03
   _currentLevelIndex: 0
   _gridView: {fileID: 1807148794}
 --- !u!114 &52017105

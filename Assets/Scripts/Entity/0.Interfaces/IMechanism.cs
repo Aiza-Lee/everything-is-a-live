@@ -10,6 +10,7 @@ namespace GameLogic {
 		/// 检测范围（朝上）
 		/// </summary>
 		Range DetectRange { get; }
+		bool RangeActive { get; }
 		/// <summary>
 		/// 当前朝向
 		/// </summary>

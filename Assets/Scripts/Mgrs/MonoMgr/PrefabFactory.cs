@@ -20,6 +20,7 @@ namespace GameLogic {
 		[SerializeField] private GameObject _playerPrefab;
 		[SerializeField] private GameObject _groundPrefab;
 		[SerializeField] private GameObject _lightCellPrefab;
+		[SerializeField] private GameObject _terminalPrefab;
 
 
 		private void Start() {
@@ -30,6 +31,7 @@ namespace GameLogic {
 			PoolSystem.InitPrefabPool(_playerPrefab);
 			PoolSystem.InitPrefabPool(_groundPrefab);
 			PoolSystem.InitPrefabPool(_lightCellPrefab);
+			PoolSystem.InitPrefabPool(_terminalPrefab);
 		}
 
 		public GroundView CreateGroundView(IGround ground) {
@@ -41,6 +43,9 @@ namespace GameLogic {
 		public MechanismView CreateMechanismView(IMechanism mechanism) {
 			var entity = PoolSystem.PopGO<MechanismView>(_mechanismPrefab);
 			entity.SetEntity(mechanism);
+			if (mechanism.TypeID != "Wall" && mechanism.TypeID != "Curtain") {
+				entity.GetComponent<SpriteRenderer>().sprite = _mechanismSprites.Find(x => x.Key == "temp").Value;
+			}
 			return entity;
 		}
 
@@ -52,6 +57,10 @@ namespace GameLogic {
 
 		public GameObject CreateLightCell() {
 			return PoolSystem.PopGO(_lightCellPrefab);
+		}
+
+		public GameObject CreateTerminal() {
+			return PoolSystem.PopGO(_terminalPrefab);
 		}
 
 	}

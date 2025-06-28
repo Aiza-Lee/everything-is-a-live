@@ -25,8 +25,8 @@ namespace GameLogic {
 				_positions[i] = rotation switch {
 					Rotation.ClockWise => new GridPosition(p.Y, -p.X),
 					Rotation.CounterClockWise => new GridPosition(-p.Y, p.X),
-					Rotation.FlipX => new GridPosition(-p.X, p.Y),
-					Rotation.FlipY => new GridPosition(p.X, -p.Y),
+					Rotation.FlipX => new GridPosition(p.X, -p.Y),
+					Rotation.FlipY => new GridPosition(-p.X, p.Y),
 					Rotation.Hemi => new GridPosition(-p.X, -p.Y),
 					_ => throw new System.NotImplementedException(),
 				};

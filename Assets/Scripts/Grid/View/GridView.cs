@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using NSFrame;
 using UnityEngine;
@@ -13,6 +12,7 @@ namespace GameLogic {
 		[SerializeField] private PlayerView playerView;
 
 		private readonly List<GameObject> _lightCells = new();
+		private GameObject _terminal;
 
 		IGrid Grid { get; set; }
 
@@ -20,6 +20,7 @@ namespace GameLogic {
 			Grid = grid;
 			grid.OnDestroy += OnModelDestroy;
 			grid.OnReCalculateMaps += OnReCalculateMaps;
+			OnReCalculateMaps(); // 这里在传值过来的时候就已经算过一次了，回调少了一次
 			foreach (var entity in grid.Entities_ReadOnly.Values) {
 				if (entity is IGround ground) {
 					PrefabFactory.Inst.CreateGroundView(ground).transform.SetParent(_GroudsParent, false);
@@ -31,6 +32,10 @@ namespace GameLogic {
 					playerView.transform.SetParent(this.transform, false);
 				}
 			}
+
+			_terminal = PrefabFactory.Inst.CreateTerminal();
+			_terminal.transform.SetParent(this.transform, false);
+			_terminal.transform.localPosition = new Vector3(GameMgr.Inst.PlayerWinPosition.X, GameMgr.Inst.PlayerWinPosition.Y, 0);
 		}
 
 		private void OnReCalculateMaps() {
@@ -55,6 +60,11 @@ namespace GameLogic {
 
 		private void OnModelDestroy() {
 			Grid = null;
+			for (int i = 0; i < _lightCells.Count; i++) {
+				PoolSystem.PushGO(_lightCells[i]);
+			}
+			_lightCells.Clear();
+			PoolSystem.PushGO(_terminal);
 		}
 	}
 }
