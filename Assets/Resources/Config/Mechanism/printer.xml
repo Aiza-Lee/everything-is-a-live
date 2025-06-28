@@ -3,7 +3,7 @@
 	<ID>printer</ID>
 	<Name>打印机</Name>
 	<!--是否阻碍玩家运动-->
-	<IsBlock>true</IsBlock>
+	<IsBlock>false</IsBlock>
 	<IsBlockLight>false</IsBlockLight>
 	<LevelConfigs>
 		<LevelConfig level = "1">
