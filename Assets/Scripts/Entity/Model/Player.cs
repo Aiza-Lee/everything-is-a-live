@@ -1,13 +1,15 @@
 using System;
-using UnityEditor;
 
 namespace GameLogic {
 	public class Player : IPlayer {
-		public GUID ID => new();
+		public string GID { get; } = Guid.NewGuid().ToString();
 		public GridPosition Position { get; set; }
-		public event Action OnDestroy;
+		public event Action OnLogicDestroy;
 
-		public void LogicDestroy() { }
+		public void LogicDestroy() {
+			OnLogicDestroy?.Invoke();
+			OnLogicDestroy = null;
+		}
 
 		public bool Move(Direction direction) {
 			if (GameMgr.Inst.Grid.IsWalkable(Position + DirectionToPosition.Convert(direction))) {
@@ -19,8 +21,6 @@ namespace GameLogic {
 			}
 		}
 
-		public void Tick() {
-			;
-		}
+		public void Tick() { }
 	}
 }

@@ -1,5 +1,4 @@
 using System;
-using System.Xml;
 
 namespace GameLogic {
 	public enum ActionLogic {
@@ -10,19 +9,19 @@ namespace GameLogic {
 		/// <summary>
 		/// 检测范围（朝上）
 		/// </summary>
-		Range DetectRange { get; set; }
+		Range DetectRange { get; }
 		/// <summary>
 		/// 当前朝向
 		/// </summary>
-		Direction Direction { get; set; }
+		Direction CurDrct { get; set; }
 		bool IsBlock { get; }
+		string TypeID { get; }
+
+		void TriggerFunc();
+		void SetLevel(int level);
 
 		event Action<Direction> OnDirectionChanged;
 		event Action<GridPosition> OnPositionChanged;
-
-		#region Default Implementations
-		bool Detect(GridPosition pos) => DetectRange.CheckContained(Position, pos);
-		#endregion
 
 	}
 }

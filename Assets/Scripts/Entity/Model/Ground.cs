@@ -3,10 +3,19 @@ using UnityEditor;
 
 namespace GameLogic {
 	public class Ground : IGround {
-		public GUID ID { get; } = new GUID();
 		public GridPosition Position { get; set; }
-		public event Action OnDestroy;
-		public void LogicDestroy() {}
+
+		public string GID { get; } = Guid.NewGuid().ToString();
+
+		public event Action OnLogicDestroy;
+		public void LogicDestroy() {
+			OnLogicDestroy?.Invoke();
+			OnLogicDestroy = null;
+		}
 		public void Tick() {}
+
+		public Ground(GridPosition position) {
+			Position = position;
+		}
 	}
 }

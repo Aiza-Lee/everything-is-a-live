@@ -3,8 +3,18 @@ using UnityEngine;
 
 namespace GameLogic {
 	public class MechanismConfigMgr {
-		private MechanismConfigMgr() { }
+		private MechanismConfigMgr() { 
+			LoadMechanismConfigs();
+		}
 		public static MechanismConfigMgr Inst { get; } = new();
+
+		public MechanismConfig GetMechanismConfig(string typeID) {
+			if (_mechanismConfigs.TryGetValue(typeID, out var config)) {
+				return config;
+			}
+			Debug.LogError($"MechanismConfigMgr: No config found for ID {typeID}");
+			return null;
+		}
 
 		private readonly Dictionary<string, MechanismConfig> _mechanismConfigs = new();
 

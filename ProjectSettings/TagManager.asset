@@ -50,6 +50,9 @@ TagManager:
   - name: Entity
     uniqueID: 2491991329
     locked: 0
+  - name: LightCell
+    uniqueID: 457934401
+    locked: 0
   - name: Front
     uniqueID: 2515088811
     locked: 0

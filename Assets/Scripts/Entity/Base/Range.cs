@@ -1,21 +1,28 @@
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace GameLogic {
-	public struct Range {
-		public List<GridPosition> positions;
+	public class Range {
+		public ReadOnlyCollection<GridPosition> Positions => _positions.AsReadOnly();
+		private List<GridPosition> _positions = new();
+
+		public Range() { }
+		public Range(Range other) {
+			_positions = new List<GridPosition>(other._positions);
+		}
 
 		public void AddPosition(GridPosition pos) {
-			positions ??= new List<GridPosition>();
-			positions.Add(pos);
+			_positions ??= new List<GridPosition>();
+			_positions.Add(pos);
 		}
 
 		/// <summary>
 		/// 旋转翻转，直接修改成员
 		/// </summary>
-		public readonly void Rotate90(Rotation rotation) {
-			for (int i = 0; i < positions.Count; i++) {
-				var p = positions[i];
-				positions[i] = rotation switch {
+		public void Rotate(Rotation rotation) {
+			for (int i = 0; i < _positions.Count; i++) {
+				var p = _positions[i];
+				_positions[i] = rotation switch {
 					Rotation.ClockWise => new GridPosition(p.Y, -p.X),
 					Rotation.CounterClockWise => new GridPosition(-p.Y, p.X),
 					Rotation.FlipX => new GridPosition(-p.X, p.Y),
@@ -27,19 +34,10 @@ namespace GameLogic {
 		}
 
 		/// <summary>
-		/// 计算相对于中心点的所有位置
-		/// </summary>
-		public readonly IEnumerable<GridPosition> CalculatePositions(GridPosition center) {
-			foreach (var p in positions) {
-				yield return new GridPosition(center.X + p.X, center.Y + p.Y);
-			}
-		}
-
-		/// <summary>
 		/// 检测某个位置是否在范围内
 		/// </summary>
-		public readonly bool CheckContained(GridPosition center, GridPosition pos) {
-			foreach (var p in positions) {
+		public bool CheckContained(GridPosition center, GridPosition pos) {
+			foreach (var p in _positions) {
 				if (new GridPosition(center.X + p.X, center.Y + p.Y) == pos) {
 					return true;
 				}
