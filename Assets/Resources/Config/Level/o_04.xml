@@ -13,7 +13,7 @@
 	<Mechanism>
 		<GID>02</GID>
 		<ID>pcu_1</ID>
-		<GridPosition x="4" y="7" />
+		<GridPosition x="5" y="3" />
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
@@ -27,7 +27,7 @@
 	<Mechanism>
 		<GID>04</GID>
 		<ID>pcu_1</ID>
-		<GridPosition x="7" y="7" />
+		<GridPosition x="8" y="3" />
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
@@ -41,7 +41,7 @@
 	<Mechanism>
 		<GID>06</GID>
 		<ID>pcu_1</ID>
-		<GridPosition x="10" y="7" />
+		<GridPosition x="11" y="3" />
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
@@ -54,8 +54,8 @@
 	</Mechanism>
 	<Mechanism>
 		<GID>08</GID>
-		<ID>pcu_2</ID>
-		<GridPosition x="5" y="4" />
+		<ID>pcu_1</ID>
+		<GridPosition x="14" y="3" />
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
