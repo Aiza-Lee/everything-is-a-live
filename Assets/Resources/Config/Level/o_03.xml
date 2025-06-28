@@ -1,0 +1,173 @@
+<Level>
+	<ID>o_03</ID>
+	<Height>10</Height>
+	<Width>15</Width>
+	<Mechanism>
+		<GID>01</GID>
+		<ID>monitor_2</ID>
+		<GridPosition x="2" y="3" />
+		<!--默认机关都是朝上的，匹配在机关配置中写的检测范围，这里的旋转就是初始化关卡调整朝向用的-->
+		<InitRotate>S</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>02</GID>
+		<ID>pcu_1</ID>
+		<GridPosition x="4" y="7" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>03</GID>
+		<ID>pcd_2</ID>
+		<GridPosition x="5" y="7" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>04</GID>
+		<ID>pcu_1</ID>
+		<GridPosition x="7" y="7" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>05</GID>
+		<ID>pcd_2</ID>
+		<GridPosition x="8" y="7" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>06</GID>
+		<ID>pcu_1</ID>
+		<GridPosition x="10" y="7" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>07</GID>
+		<ID>pcd_1</ID>
+		<GridPosition x="11" y="7" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>08</GID>
+		<ID>pcu_2</ID>
+		<GridPosition x="5" y="4" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>09</GID>
+		<ID>pcd_2</ID>
+		<GridPosition x="6" y="4" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>10</GID>
+		<ID>pcu_2</ID>
+		<GridPosition x="9" y="4" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>11</GID>
+		<ID>pcd_1</ID>
+		<GridPosition x="10" y="4" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>12</GID>
+		<ID>people</ID>
+		<GridPosition x="13" y="4" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level="2">
+				<DetectRange>
+				<GridPosition x="0" y="1" />
+				<GridPosition x="0" y="2" />
+				</DetectRange>
+				<Action>
+				<MoveLogic>U,U,U,U</MoveLogic>
+				<RotateLogic>0,0,0,X</RotateLogic>
+			    </Action>
+				<Jump>
+					<Wait>4</Wait>
+					<Target>1</Target>
+				</Jump>	
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>13</GID>
+		<ID>people</ID>
+		<GridPosition x="13" y="3" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level="2">
+				<DetectRange>
+				<GridPosition x="0" y="1" />
+				<GridPosition x="0" y="2" />
+				</DetectRange>
+				<Action>
+				<MoveLogic>L,U,U,L,U,L,L,L</MoveLogic>
+				<RotateLogic>N,R,0,N,R,N,0,0</RotateLogic>
+			    </Action>
+				<Jump>
+					<Wait>8</Wait>
+					<Target>3</Target>
+				</Jump>	
+			</LevelConfig>
+			<LevelConfig level="3">
+				<DetectRange>
+				</DetectRange>
+				<Action>
+				<MoveLogic>0</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+			    </Action>
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>14</GID>
+		<ID>printer</ID>
+		<GridPosition x="13" y="9" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level="1">
+				<DetectRange>
+				</DetectRange>
+				<Action>
+				<MoveLogic>0</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+			    </Action>
+				<Function type="order">
+					<Targets>
+						<Target>
+							<GID>12</GID>
+							<level>2</level>
+						</Target>
+						<Target>
+							<GID>13</GID>
+							<level>2</level>
+						</Target>
+					</Targets>
+				</Function>
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>15</GID>
+		<ID>water_dispenser</ID>
+		<GridPosition x="6" y="9" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+</Level>
