@@ -142,11 +142,11 @@ namespace GameLogic {
 					_ => FunctionType.Order
 				};
 				// 目前只处理 Order 类型的函数 
-				Order_Param_Target = funcNode.SelectSingleNode("Targets").SelectNodes("Target")
+				Order_Param_Target = funcNode.SelectSingleNode("Targets")?.SelectNodes("Target")
 					.Cast<XmlNode>()
 					.Select(targetNode => targetNode.SelectSingleNode("GID").InnerText)
 					.ToList();
-				Order_Param_Level = funcNode.SelectSingleNode("Targets").SelectNodes("Target")
+				Order_Param_Level = funcNode.SelectSingleNode("Targets")?.SelectNodes("Target")
 					.Cast<XmlNode>()
 					.Select(targetNode => targetNode.SelectSingleNode("Level").InnerText)
 					.ToList();

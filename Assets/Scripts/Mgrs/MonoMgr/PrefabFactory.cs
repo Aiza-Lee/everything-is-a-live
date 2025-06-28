@@ -38,7 +38,7 @@ namespace GameLogic {
 			return entity;
 		}
 
-		public MechanismView CreateMechanismView(string typeID, IMechanism mechanism) {
+		public MechanismView CreateMechanismView(IMechanism mechanism) {
 			var entity = PoolSystem.PopGO<MechanismView>(_mechanismPrefab);
 			entity.SetEntity(mechanism);
 			return entity;
@@ -48,6 +48,10 @@ namespace GameLogic {
 			var entity = PoolSystem.PopGO<PlayerView>(_playerPrefab);
 			entity.SetEntity(player);
 			return entity;
+		}
+
+		public GameObject CreateLightCell() {
+			return PoolSystem.PopGO(_lightCellPrefab);
 		}
 
 	}

@@ -6,9 +6,11 @@ namespace GameLogic {
 	public sealed class GlobalMgr : MonoSingleton<GlobalMgr> {
 		[SerializeField] private List<string> _levelNames;
 		[SerializeField] private int _currentLevelIndex = 0;
+		[SerializeField] private GridView _gridView;
 
 		private void Start() {
 			GameMgr.Inst.LoadLevel(_levelNames[_currentLevelIndex]);
+			_gridView.Init(GameMgr.Inst.Grid);
 		}
 
 		public void LevelOver() {

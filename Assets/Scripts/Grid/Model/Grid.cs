@@ -89,7 +89,10 @@ namespace GameLogic {
 					}
 				}
 			}
+			OnReCalculateMaps?.Invoke();
 		}
+		public event Action OnDestroy;
+		public event Action OnReCalculateMaps;
 		public void LogicDestroy() {
 			foreach (var entity in _entities.Values) {
 				entity.LogicDestroy();
@@ -97,8 +100,8 @@ namespace GameLogic {
 			_entities.Clear();
 			OnDestroy?.Invoke();
 			OnDestroy = null;
+			OnReCalculateMaps = null;
 		}
-		public event Action OnDestroy;
 
 
 		private readonly List<List<int>> _lightMap = new();

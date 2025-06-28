@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using NSFrame;
 using UnityEngine;
 
@@ -10,17 +12,49 @@ namespace GameLogic {
 
 		[SerializeField] private PlayerView playerView;
 
+		private readonly List<GameObject> _lightCells = new();
 
 		IGrid Grid { get; set; }
 
 		public void Init(IGrid grid) {
 			Grid = grid;
 			grid.OnDestroy += OnModelDestroy;
+			grid.OnReCalculateMaps += OnReCalculateMaps;
+			foreach (var entity in grid.Entities_ReadOnly.Values) {
+				if (entity is IGround ground) {
+					PrefabFactory.Inst.CreateGroundView(ground).transform.SetParent(_GroudsParent, false);
+				} else if (entity is IMechanism mechanism) {
+					var view = PrefabFactory.Inst.CreateMechanismView(mechanism);
+					view.transform.SetParent(_MechanismsParent, false);
+				} else if (entity is IPlayer player) {
+					playerView = PrefabFactory.Inst.CreatePlayerView(player);
+					playerView.transform.SetParent(this.transform, false);
+				}
+			}
+		}
+
+		private void OnReCalculateMaps() {
+			for (int i = 0; i < _lightCells.Count; i++) {
+				PoolSystem.PushGO(_lightCells[i]);
+			}
+			_lightCells.Clear();
+			for (int x = 1; x <= Grid.Width; x++) {
+				for (int y = 1; y <= Grid.Height; y++) {
+					var pos = new GridPosition(x, y);
+					int lightCount = Grid.CountLight(pos);
+					while (lightCount > 0) {
+						var lightCell = PrefabFactory.Inst.CreateLightCell();
+						lightCell.transform.SetParent(_lightCellParent, false);
+						lightCell.transform.localPosition = new Vector3(x, y, 0);
+						_lightCells.Add(lightCell);
+						lightCount--;
+					}
+				}
+			}
 		}
 
 		private void OnModelDestroy() {
 			Grid = null;
-			PoolSystem.PushGO(this.gameObject);
 		}
 	}
 }

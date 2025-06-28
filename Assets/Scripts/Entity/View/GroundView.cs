@@ -11,11 +11,11 @@ namespace GameLogic {
 		}
 
 		public void SetEntity(IEntity entity) {
-			if (entity is not IMechanism mechanism) {
+			if (entity is not IGround ground) {
 				Debug.LogError("Entity is not a mechanism");
 				return;
 			}
-			Entity = mechanism;
+			Entity = ground;
 			Entity.OnLogicDestroy += OnLogicDestroy;
 			transform.position = new Vector3(
 				entity.Position.X,

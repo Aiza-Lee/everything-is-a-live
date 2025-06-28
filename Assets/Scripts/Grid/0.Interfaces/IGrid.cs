@@ -1,3 +1,4 @@
+using System;
 using System.Collections.ObjectModel;
 using System.Xml;
 
@@ -19,6 +20,7 @@ namespace GameLogic {
 		/// 计算所有实体的地图信息
 		/// </summary>
 		void CalculateMaps();
+		event Action OnReCalculateMaps;
 
 		void LogicDestroy();
 		event System.Action OnDestroy;

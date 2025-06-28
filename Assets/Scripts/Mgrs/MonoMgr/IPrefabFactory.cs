@@ -1,6 +1,6 @@
 namespace GameLogic {
 	public interface IPrefabFactory {
-		MechanismView CreateMechanismView(string typeID, IMechanism mechanism);
+		MechanismView CreateMechanismView(IMechanism mechanism);
 		PlayerView CreatePlayerView(IPlayer player);
 		GroundView CreateGroundView(IGround ground);
 	}

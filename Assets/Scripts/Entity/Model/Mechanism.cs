@@ -34,7 +34,7 @@ namespace GameLogic {
 			CurDrct = Direction.Up;
 			_curLevel = root.SelectSingleNode("InitLevel").InnerText;
 
-			var overrideConfig = root.SelectSingleNode("LevelConfigs").SelectNodes("LevelConfig");
+			var overrideConfig = root.SelectSingleNode("LevelConfigs")?.SelectNodes("LevelConfig");
 			if (overrideConfig != null) {
 				foreach (XmlNode config in overrideConfig) {
 					var res = new MechanismLevelConfig(config);
@@ -112,6 +112,9 @@ namespace GameLogic {
 		}
 
 		public void Tick() {
+			if (TypeID == "Curtain" || TypeID == "Wall") {
+				return;
+			}
 			var levelConfig = _config.MechanismLevels[_curLevel];
 
 			var rotateAction = levelConfig.RotateActions[_rotateCnt];
