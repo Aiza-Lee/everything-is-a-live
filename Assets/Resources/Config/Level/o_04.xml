@@ -1,7 +1,7 @@
 <Level>
-	<ID>o_03</ID>
-	<Height>10</Height>
-	<Width>15</Width>
+	<ID>o_04</ID>
+	<Height>12</Height>
+	<Width>22</Width>
 	<Mechanism>
 		<GID>01</GID>
 		<ID>monitor_2</ID>
@@ -152,11 +152,11 @@
 					<Targets>
 						<Target>
 							<GID>12</GID>
-							<Level>2</Level>
+							<level>2</level>
 						</Target>
 						<Target>
 							<GID>13</GID>
-							<Level>2</Level>
+							<level>2</level>
 						</Target>
 					</Targets>
 				</Function>
@@ -166,7 +166,7 @@
 	<Mechanism>
 		<GID>15</GID>
 		<ID>water_dispenser</ID>
-		<GridPosition x="6" y="9"/>
+		<GridPosition x="6" y="9" />
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
