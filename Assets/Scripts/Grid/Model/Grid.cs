@@ -74,6 +74,8 @@ namespace GameLogic {
 					if (mechanism.IsBlockLight) {
 						_blockLightMap[mechanism.Position.X][mechanism.Position.Y] = true;
 					}
+				} else if (entity is IPlayer player) {
+					_blockMap[player.Position.X][player.Position.Y] = true;
 				}
 			}
 			foreach (var entity in _entities.Values) {

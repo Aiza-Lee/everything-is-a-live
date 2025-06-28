@@ -77,6 +77,9 @@ namespace GameLogic {
 		}
 
 		public void TriggerFunc() {
+			if (TypeID == "Curtain" || TypeID == "Wall") {
+				return; // Stationary mechanisms do not have functions to trigger
+			}
 			if (_config.MechanismLevels[_curLevel].FuncType == FunctionType.Order) {
 				var levelConfig = _config.MechanismLevels[_curLevel];
 				var target = levelConfig.Order_Param_Target;
@@ -99,6 +102,7 @@ namespace GameLogic {
 		}
 
 		public void SetLevel(string level) {
+			Debug.Log($"Setting mechanism {GID} to level {level}");
 			_curLevel = level;
 			DetectRange = new(_config.MechanismLevels[_curLevel].DetectRange);
 			DetectRange.Rotate(DirectionExtensions.GetRotation(Direction.Up, CurDrct));

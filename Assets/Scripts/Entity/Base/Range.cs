@@ -28,6 +28,7 @@ namespace GameLogic {
 					Rotation.FlipX => new GridPosition(p.X, -p.Y),
 					Rotation.FlipY => new GridPosition(-p.X, p.Y),
 					Rotation.Hemi => new GridPosition(-p.X, -p.Y),
+					Rotation.Zero => new GridPosition(p.X, p.Y),
 					_ => throw new System.NotImplementedException(),
 				};
 			}
