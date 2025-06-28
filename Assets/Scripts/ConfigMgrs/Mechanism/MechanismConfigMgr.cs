@@ -19,9 +19,10 @@ namespace GameLogic {
 		private readonly Dictionary<string, MechanismConfig> _mechanismConfigs = new();
 
 		void LoadMechanismConfigs() {
-			var files = Resources.LoadAll<TextAsset>("Config/Mechanism");
+			var files = Resources.LoadAll<TextAsset>("Config/Mechanism/");
 			foreach (var file in files) {
-				if (!file.name.EndsWith(".xml")) continue;
+				// if (!file.name.EndsWith(".xml")) continue;
+				Debug.Log($"MechanismConfigMgr: Loading XML from {file.name}");
 				var doc = new System.Xml.XmlDocument();
 				doc.LoadXml(file.text);
 				var root = doc.DocumentElement;
@@ -30,7 +31,7 @@ namespace GameLogic {
 					continue;
 				}
 				var ID = root.GetAttribute("ID");
-				_mechanismConfigs.Add(ID, new(doc));
+				_mechanismConfigs.Add(ID, new(root));
 			}
 		}
 	}		

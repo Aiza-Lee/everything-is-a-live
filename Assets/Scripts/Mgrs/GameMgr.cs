@@ -24,7 +24,7 @@ namespace GameLogic {
 			var xmlDoc = new XmlDocument();
 			xmlDoc.LoadXml(Resources.Load<TextAsset>($"Config/Level/{levelName}").text);
 			var root = xmlDoc.SelectSingleNode("Level");
-			var csvStr = Resources.Load<TextAsset>($"Config/Level/{levelName}").text;
+			var csvStr = Resources.Load<TextAsset>($"Config/Map/{levelName}").text;
 			Grid = new Grid();
 			if (!Grid.LoadLevel(root, csvStr, out IPlayer player, out GridPosition playerWinPosition, out GridPosition playerStartPosition)) {
 				Debug.LogError($"Failed to load level: {levelName}");
