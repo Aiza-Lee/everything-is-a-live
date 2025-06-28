@@ -4,6 +4,7 @@
 	<Name>固定摄影机b</Name>
 	<!--是否阻碍玩家运动-->
 	<IsBlock>true</IsBlock>
+	<IsBlockLight>false</IsBlockLight>
 	<LevelConfigs>
 		<LevelConfig level = "1">
 			<!--被加载到场景中的默认检测范围，具体的朝向可以在关卡的xml中旋转实现-->
