@@ -1,0 +1,37 @@
+<Level>
+	<ID> </ID>
+	<Height> </Height>
+	<Width> </Width>
+	<Mechanism>
+		<GID>01</GID>
+		<ID>m_001</ID>
+		<GridPosition x="1" y="1" />
+		<!--默认机关都是朝上的，匹配在机关配置中写的检测范围，这里的旋转就是初始化关卡调整朝向用的-->
+		<InitRotate>LL</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level="1">
+				<MoveLogic type="Loop">L,L,R,R</MoveLogic>
+				<RotateLogic type="Loop">S,N,X,X</RotateLogic>
+			</LevelConfig>
+			<LevelConfig level="2">
+				<MoveLogic type="Random">
+					<!--相对出生点的矩形范围-->
+					<GridPosition x="-1" y="1" />
+					<GridPosition x="1" y="1" />
+					<GridPosition x="1" y="-1" />
+					<GridPosition x="-1" y="-1" />
+				</MoveLogic>
+				<RotateLogic type="Random">S,N,X,X</RotateLogic>
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+
+	<Mechanism>
+		<GID>02</GID>
+		<ID>m_001</ID>
+		<GridPosition x="3" y="3" />
+		<InitRotate>RR</InitRotate>
+	</Mechanism>
+
+</Level>

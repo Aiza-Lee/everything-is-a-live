@@ -1,0 +1,46 @@
+<Level>
+	<ID>o_01</ID>
+	<Height>9</Height>
+	<Width>19</Width>
+	
+	<Mechanism>
+		<GID>01</GID>
+		<ID>c_002</ID>
+		<GridPosition x="3" y="2" />
+		<!--默认机关都是朝上的，匹配在机关配置中写的检测范围，这里的旋转就是初始化关卡调整朝向用的-->
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+
+	<Mechanism>
+		<GID>02</GID>
+		<ID>c_001</ID>
+		<GridPosition x="4" y="8" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+
+	<Mechanism>
+		<GID>03</GID>
+		<ID>c_001</ID>
+		<GridPosition x="8" y="7" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+
+	<Mechanism>
+		<GID>04</GID>
+		<ID>c_003</ID>
+		<GridPosition x="11" y="7" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+
+	<Mechanism>
+		<GID>05</GID>
+		<ID>c_003</ID>
+		<GridPosition x="16" y="7" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+</Level>
