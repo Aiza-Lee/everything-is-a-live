@@ -120,10 +120,15 @@ namespace GameLogic {
 					.ForEach(r => RotateActions.Add(r));
 
 			var detectLogicNode = root.SelectSingleNode("Action/DetectLogic");
-			detectLogicNode?.InnerText.Split(',')
+			if (detectLogicNode != null) {
+				detectLogicNode.InnerText.Split(',')
 					.Select(detect => detect.Trim() == "1")
 					.ToList()
 					.ForEach(d => DetectActions.Add(d));
+			} else {
+				DetectActions.Add(true);
+			}
+			
 
 			var jumpNode = root.SelectSingleNode("IsJump");
 			if (jumpNode != null) {
