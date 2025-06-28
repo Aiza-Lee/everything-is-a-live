@@ -71,6 +71,9 @@ namespace GameLogic {
 					if (mechanism.IsBlock) {
 						_blockMap[mechanism.Position.X][mechanism.Position.Y] = true;
 					}
+					if (mechanism.IsBlockLight) {
+						_blockLightMap[mechanism.Position.X][mechanism.Position.Y] = true;
+					}
 				}
 			}
 			foreach (var entity in _entities.Values) {
@@ -100,16 +103,20 @@ namespace GameLogic {
 
 		private readonly List<List<int>> _lightMap = new();
 		private readonly List<List<bool>> _blockMap = new();
+		private readonly List<List<bool>> _blockLightMap = new();
 
 		private void ClearMaps() {
 			_lightMap.Clear();
 			_blockMap.Clear();
+			_blockLightMap.Clear();
 			for (int i = 0; i <= Width; i++) {
 				_lightMap.Add(new List<int>(Height + 1));
 				_blockMap.Add(new List<bool>(Height + 1));
+				_blockLightMap.Add(new List<bool>(Height + 1));
 				for (int j = 0; j <= Height; j++) {
 					_lightMap[i].Add(0);
 					_blockMap[i].Add(false);
+					_blockLightMap[i].Add(false);
 				}
 			}
 		}
@@ -166,8 +173,8 @@ namespace GameLogic {
 				// 起点终点重合，直接检查
 				int ix = (int)Math.Round(x0);
 				int iy = (int)Math.Round(y0);
-				if (ix >= 1 && ix < _blockMap.Count && iy >= 1 && iy < _blockMap[0].Count) {
-					if (_blockMap[ix][iy]) return false;
+				if (ix >= 1 && ix < _blockLightMap.Count && iy >= 1 && iy < _blockLightMap[0].Count) {
+					if (_blockLightMap[ix][iy]) return false;
 				}
 				return true;
 			}
@@ -176,8 +183,8 @@ namespace GameLogic {
 			for (int i = 0; i <= steps; i++) {
 				int ix = (int)Math.Round(x);
 				int iy = (int)Math.Round(y);
-				if (ix >= 1 && ix < _blockMap.Count && iy >= 1 && iy < _blockMap[0].Count) {
-					if (_blockMap[ix][iy]) return false;
+				if (ix >= 1 && ix < _blockLightMap.Count && iy >= 1 && iy < _blockLightMap[0].Count) {
+					if (_blockLightMap[ix][iy]) return false;
 				}
 				x += sx;
 				y += sy;

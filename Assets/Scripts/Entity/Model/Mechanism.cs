@@ -1,5 +1,6 @@
 using System;
 using System.Xml;
+using NUnit.Framework;
 using UnityEngine;
 
 namespace GameLogic {
@@ -8,6 +9,7 @@ namespace GameLogic {
 		public Direction CurDrct { get; set; }
 
 		public bool IsBlock { get; private set; }
+		public bool IsBlockLight { get; private set; }
 		public GridPosition Position { get; set; }
 		public string GID { get; private set; }
 
@@ -50,6 +52,7 @@ namespace GameLogic {
 		private void LoadDefaulConfig() {
 			_config = MechanismConfigMgr.Inst.GetMechanismConfig(TypeID);
 			IsBlock = _config.IsBlock;
+			IsBlockLight = _config.IsBlockLight;
 			TypeID = _config.TypeID;
 		}
 		/// <summary>
@@ -61,6 +64,11 @@ namespace GameLogic {
 			Position = position;
 			CurDrct = Direction.Up;
 			IsBlock = typeID switch {
+				"Wall" => true,
+				"Curtain" => true,
+				_ => false
+			};
+			IsBlockLight = typeID switch {
 				"Wall" => true,
 				"Curtain" => true,
 				_ => false

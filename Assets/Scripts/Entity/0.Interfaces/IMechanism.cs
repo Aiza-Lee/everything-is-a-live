@@ -15,6 +15,7 @@ namespace GameLogic {
 		/// </summary>
 		Direction CurDrct { get; set; }
 		bool IsBlock { get; }
+		bool IsBlockLight { get; }
 		string TypeID { get; }
 
 		void TriggerFunc();

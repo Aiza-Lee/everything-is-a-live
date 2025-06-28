@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
 
@@ -23,9 +22,9 @@ namespace GameLogic {
 		public bool LoadLevel(string levelName) {
 			Clear();
 			var xmlDoc = new XmlDocument();
-			xmlDoc.LoadXml(Resources.Load<TextAsset>($"Configs/Level/{levelName}.xml").text);
+			xmlDoc.LoadXml(Resources.Load<TextAsset>($"Config/Level/{levelName}").text);
 			var root = xmlDoc.SelectSingleNode("Level");
-			var csvStr = Resources.Load<TextAsset>($"Configs/Level/{levelName}.csv").text;
+			var csvStr = Resources.Load<TextAsset>($"Config/Level/{levelName}").text;
 			Grid = new Grid();
 			if (!Grid.LoadLevel(root, csvStr, out IPlayer player, out GridPosition playerWinPosition, out GridPosition playerStartPosition)) {
 				Debug.LogError($"Failed to load level: {levelName}");
@@ -37,7 +36,7 @@ namespace GameLogic {
 			return true;
 		}
 		private void Clear() {
-			Grid.LogicDestroy();
+			Grid?.LogicDestroy();
 			Grid = null;
 			Player = null;
 		}

@@ -19,7 +19,7 @@ namespace GameLogic {
 		private readonly Dictionary<string, MechanismConfig> _mechanismConfigs = new();
 
 		void LoadMechanismConfigs() {
-			var files = Resources.LoadAll<TextAsset>("Configs/Mechanism");
+			var files = Resources.LoadAll<TextAsset>("Config/Mechanism");
 			foreach (var file in files) {
 				if (!file.name.EndsWith(".xml")) continue;
 				var doc = new System.Xml.XmlDocument();
