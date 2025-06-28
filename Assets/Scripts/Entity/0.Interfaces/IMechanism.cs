@@ -19,7 +19,7 @@ namespace GameLogic {
 		string TypeID { get; }
 
 		void TriggerFunc();
-		void SetLevel(int level);
+		void SetLevel(string level);
 
 		event Action<Direction> OnDirectionChanged;
 		event Action<GridPosition> OnPositionChanged;

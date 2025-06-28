@@ -32,7 +32,7 @@ namespace GameLogic {
 			);
 			var initRotate = RotationExtensions.FromString(root.SelectSingleNode("InitRotate").InnerText);
 			CurDrct = Direction.Up;
-			_curLevel = int.Parse(root.SelectSingleNode("InitLevel").InnerText);
+			_curLevel = root.SelectSingleNode("InitLevel").InnerText;
 
 			var overrideConfig = root.SelectSingleNode("LevelConfigs").SelectNodes("LevelConfig");
 			if (overrideConfig != null) {
@@ -77,21 +77,28 @@ namespace GameLogic {
 		}
 
 		public void TriggerFunc() {
-			if (_config.MechanismLevels[_curLevel].FuncType == FunctionType.TriggerLevel) {
+			if (_config.MechanismLevels[_curLevel].FuncType == FunctionType.Order) {
 				var levelConfig = _config.MechanismLevels[_curLevel];
-				var target = levelConfig.Function_Param_Target;
-				var level = levelConfig.Function_Param_Level;
-				GameMgr.Inst.Grid.Entities_ReadOnly.TryGetValue(target, out var entity);
-				if (entity is IMechanism mechanism) {
-					mechanism.SetLevel(level);
-					Debug.Log($"Mechanism {target} set to level {level}");
-				} else {
-					Debug.LogError($"Mechanism {target} not found or is not a mechanism.");
+				var target = levelConfig.Order_Param_Target;
+				var level = levelConfig.Order_Param_Level;
+				for (int i = 0; i < target.Count; i++) {
+					SetMechanismLevel(target[i], level[i]);
 				}
 			}
 		}
+		private void SetMechanismLevel(string target, string level) {
+			if (GameMgr.Inst.Grid.Entities_ReadOnly.TryGetValue(target, out var entity)) {
+				if (entity is IMechanism mechanism) {
+					mechanism.SetLevel(level);
+				} else {
+					Debug.LogError($"Entity {target} is not a mechanism.");
+				}
+			} else {
+				Debug.LogError($"Entity {target} not found.");
+			}
+		}
 
-		public void SetLevel(int level) {
+		public void SetLevel(string level) {
 			_curLevel = level;
 			DetectRange = new(_config.MechanismLevels[_curLevel].DetectRange);
 			DetectRange.Rotate(DirectionExtensions.GetRotation(Direction.Up, CurDrct));
@@ -142,7 +149,7 @@ namespace GameLogic {
 		private int _rotateCnt;
 		private int _waitCnt;
 		private int _moveCnt;
-		private int _curLevel = 1;
+		private string _curLevel = "1";
 		private MechanismConfig _config;
 
 	}

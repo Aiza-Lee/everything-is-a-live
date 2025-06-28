@@ -30,7 +30,7 @@ namespace GameLogic {
 					Debug.LogError($"MechanismConfigMgr: Failed to load XML from {file.name}, root element is null.");
 					continue;
 				}
-				var ID = root.GetAttribute("ID");
+				var ID = root.SelectSingleNode("ID").InnerText;
 				_mechanismConfigs.Add(ID, new(root));
 			}
 		}
