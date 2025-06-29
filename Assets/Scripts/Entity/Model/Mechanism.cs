@@ -101,7 +101,15 @@ namespace GameLogic {
 				for (int i = 0; i < target.Count; i++) {
 					SetMechanismLevel(target[i], level[i]);
 				}
-				GameMgr.Inst.Grid.KillEntity(GID); // Destroy itself after one-time order
+				TickMgr.Inst.AfterTick += () => {
+					// After the tick, destroy the mechanism
+					if (GameMgr.Inst.Grid.Entities_ReadOnly.TryGetValue(GID, out var entity) && entity is IMechanism) {
+						GameMgr.Inst.Grid.KillEntity(GID);
+						Debug.Log($"Mechanism {GID} triggered one-time order and will be destroyed.");
+					} else {
+						Debug.LogError($"Mechanism {GID} not found after triggering one-time order.");
+					}
+				};
 			} else if (_config.MechanismLevels[_curLevel].FuncType == FunctionType.Water) {
 				// Todo: Water mechanism logic can be implemented here
 				Debug.Log($"Water mechanism {GID} triggered.");

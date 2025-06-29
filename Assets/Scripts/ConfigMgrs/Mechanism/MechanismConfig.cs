@@ -144,7 +144,7 @@ namespace GameLogic {
 			var funcNode = root.SelectSingleNode("Function");
 			if (funcNode != null) {
 				FuncType = funcNode.Attributes["type"]?.Value switch {
-					"oneOrder" => FunctionType.OneOrder,
+					"oneorder" => FunctionType.OneOrder,
 					"order" => FunctionType.Order,
 					"water" => FunctionType.Water,
 					_ => FunctionType.Order

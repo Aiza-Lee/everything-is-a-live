@@ -5,6 +5,9 @@ namespace GameLogic {
 		private TickMgr() { }
 		public static TickMgr Inst { get; } = new();
 		public event Action BeforeTick;
+		/// <summary>
+		/// 每tick清空
+		/// </summary>
 		public event Action AfterTick;
 
 		public void Tick() {
@@ -27,6 +30,7 @@ namespace GameLogic {
 				}
 			}
 			AfterTick?.Invoke();
+			AfterTick = null;
 		}
 	}
 }
