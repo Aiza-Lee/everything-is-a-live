@@ -1,7 +1,6 @@
 using UnityEngine;
 
-namespace GameLogic
-{
+namespace GameLogic {
 	[RequireComponent(typeof(RectTransform))]
 	public class SmoothOffsetMax : SmoothChangeBase<Vector2> {
 		private RectTransform _rectTransform;

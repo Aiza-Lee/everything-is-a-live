@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameLogic.View
+namespace GameLogic
 {
 	public class SmoothScale : SmoothChangeBase<Vector3> {
 		public override Vector3 GetCurVal() {
