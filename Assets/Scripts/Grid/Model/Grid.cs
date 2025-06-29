@@ -58,6 +58,16 @@ namespace GameLogic {
 			return true;
 		}
 
+		public bool KillEntity(string gid) {
+			if (_entities.TryGetValue(gid, out var entity)) {
+				entity.LogicDestroy();
+				_entities.Remove(gid);
+				CalculateMaps();
+				return true;
+			}
+			return false;
+		}
+
 		public bool IsWalkable(GridPosition pos) {
 			return !_blockMap[pos.X][pos.Y];
 		}

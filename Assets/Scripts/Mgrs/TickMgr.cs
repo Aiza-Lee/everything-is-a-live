@@ -17,7 +17,7 @@ namespace GameLogic {
 				GlobalMgr.Inst.LevelWin();
 			}
 			if (GameMgr.Inst.CheckGameOver()) {
-				GlobalMgr.Inst.LevelOver();
+				GlobalMgr.Inst.LevelLose();
 			}
 			foreach (var entity in GameMgr.Inst.Grid.Entities_ReadOnly.Values) {
 				if (entity is IMechanism mechanism) {

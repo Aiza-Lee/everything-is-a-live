@@ -51,6 +51,8 @@ namespace GameLogic {
 
 	public enum FunctionType {
 		Order,
+		//执行完后销毁自己
+		OneOrder,
 		Water,
 	}
 
@@ -142,8 +144,9 @@ namespace GameLogic {
 			var funcNode = root.SelectSingleNode("Function");
 			if (funcNode != null) {
 				FuncType = funcNode.Attributes["type"]?.Value switch {
-					"Order" => FunctionType.Order,
-					"Water" => FunctionType.Water,
+					"oneOrder" => FunctionType.OneOrder,
+					"order" => FunctionType.Order,
+					"water" => FunctionType.Water,
 					_ => FunctionType.Order
 				};
 				// 目前只处理 Order 类型的函数 

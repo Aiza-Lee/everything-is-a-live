@@ -24,6 +24,7 @@ namespace GameLogic {
 		}
 
 		private void Start() {
+			TogglePanel<MoveTimer>();
 		}
 
 		private void Update() {

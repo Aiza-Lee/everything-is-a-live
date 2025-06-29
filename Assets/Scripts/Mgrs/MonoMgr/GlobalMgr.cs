@@ -13,7 +13,7 @@ namespace GameLogic {
 			_gridView.Init(GameMgr.Inst.Grid);
 		}
 
-		public void LevelOver() {
+		public void LevelLose() {
 			//todo: 结束动画转场
 			GameMgr.Inst.LoadLevel(_levelNames[_currentLevelIndex]);
 			_gridView.Init(GameMgr.Inst.Grid);

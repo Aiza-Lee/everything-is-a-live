@@ -25,5 +25,7 @@ namespace GameLogic {
 		void LogicDestroy();
 		event System.Action OnDestroy;
 
+		bool KillEntity(string gid);
+
 	}
 }
