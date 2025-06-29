@@ -1,0 +1,33 @@
+<Level>
+	<ID>o_07</ID>
+	<Height>5</Height>
+	<Width>5</Width>
+	<Mechanism>
+		<GID>01</GID>
+		<ID>monitor_x</ID>
+		<GridPosition x="2" y="3" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>02</GID>
+		<ID>monitor_x</ID>
+		<GridPosition x="2" y="4" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>03</GID>
+		<ID>monitor_x</ID>
+		<GridPosition x="4" y="3" />
+		<InitRotate>Y</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>05</GID>
+		<ID>monitor_x</ID>
+		<GridPosition x="4" y="4" />
+		<InitRotate>Y</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+</Level>
