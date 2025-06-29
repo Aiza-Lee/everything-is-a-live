@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace GameLogic {
 
 	public static class DirectionToPosition {
@@ -36,6 +38,9 @@ namespace GameLogic {
 
 		public override readonly string ToString() {
 			return $"({X}, {Y})";
+		}
+		public readonly Vector2 AsVector2() {
+			return new Vector2(X, Y);
 		}
 	}
 }

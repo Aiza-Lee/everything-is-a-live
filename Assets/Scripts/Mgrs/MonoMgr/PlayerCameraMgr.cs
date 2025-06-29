@@ -3,10 +3,15 @@ using NSFrame;
 using UnityEngine;
 
 namespace GameLogic {
+	public enum CamSize {
+		Focus = 3,
+		Normal = 5,
+	}
 	[RequireComponent(typeof(SmoothMove), typeof(SmoothZRotate))]
 	public class PlayerCameraMgr : MonoSingleton<PlayerCameraMgr> {
 		private SmoothMove _smoothMove;
 		private SmoothZRotate _smoothZRotate;
+		private Camera _camera;
 		public Vector2 DeadZoneSize = new(3f, 6f);
 
 		[SerializeField] private float _maxShakeAngle = 25f; // 最大抖动角度
@@ -17,6 +22,7 @@ namespace GameLogic {
 			base.Awake();
 			_smoothMove = GetComponent<SmoothMove>();
 			_smoothZRotate = GetComponent<SmoothZRotate>();
+			_camera = GetComponent<Camera>();
 		}
 
 		private void Update() {
@@ -25,7 +31,7 @@ namespace GameLogic {
 				_shakeTimer = 0f;
 				float randomAngle = Random.Range(-_maxShakeAngle, _maxShakeAngle);
 				_smoothZRotate.SetTarget(randomAngle);
-				// 可选：_shakeInterval = Random.Range(0.5f, 1.5f); // 随机间隔更自然
+				_shakeInterval = Random.Range(0.5f, 1.5f);
 			}
 		}
 
@@ -43,9 +49,21 @@ namespace GameLogic {
 					Debug.LogError("SmoothMove component is not found on PlayerCameraMgr.");
 				}
 			}
+
+			_camera.orthographicSize = (int) CamSize.Normal;
 		}
 		public void SetCurPosition(Vector2 position) {
 			_smoothMove.SetCurVal(new Vector3(position.x, position.y, -10f));
+			_camera.orthographicSize = (int) CamSize.Normal;
+		}
+
+		public void Focus(Vector2 position) {
+			_camera.orthographicSize = (int) CamSize.Focus;
+			if (_smoothMove != null) {
+				_smoothMove.SetTarget(new Vector3(position.x, position.y, -10f));
+			} else {
+				Debug.LogError("SmoothMove component is not found on PlayerCameraMgr.");
+			}
 		}
 	}
 }

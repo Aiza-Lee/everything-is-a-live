@@ -30,7 +30,7 @@ namespace GameLogic {
 				} else if (entity is IPlayer player) {
 					playerView = PrefabFactory.Inst.CreatePlayerView(player);
 					playerView.transform.SetParent(this.transform, false);
-					UIMgr.Inst.FindPanel<MoveTimer>().SetController(playerView.GetComponent<PlayerController>());
+					PlayerController.Inst.PlayerTrans = playerView.transform;
 				}
 			}
 

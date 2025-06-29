@@ -7,23 +7,17 @@ namespace GameLogic {
 
 		[SerializeField] private TextMeshProUGUI _timerText;
 
-		private PlayerController _controller;
-
-		public void SetController(PlayerController controller) {
-			_controller = controller;
-			Update();
-		}
+		private PlayerController Controller => PlayerController.Inst;
 
 		private void Update() {
-			if (_controller == null) {
+			if (Controller == null) {
 				_timerText.text = "X";
 			} else {
-				_timerText.text = _controller.Countdown.ToString("F1");
+				_timerText.text = Controller.Countdown.ToString("F1");
 			}
 		}
 
 		public override void OnClose() {
-			_controller = null;
 			_timerText.text = "X";
 		}
 

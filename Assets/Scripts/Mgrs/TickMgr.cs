@@ -18,18 +18,18 @@ namespace GameLogic {
 			GameMgr.Inst.Grid.CalculateMaps();
 			if (GameMgr.Inst.CheckPlayerWin()) {
 				GlobalMgr.Inst.LevelWin();
-			}
-			if (GameMgr.Inst.CheckGameOver()) {
+			} else if (GameMgr.Inst.CheckGameOver()) {
 				GlobalMgr.Inst.LevelLose();
-			}
-			foreach (var entity in GameMgr.Inst.Grid.Entities_ReadOnly.Values) {
-				if (entity is IMechanism mechanism) {
-					if (!GameMgr.Inst.Grid.IsWalkable(mechanism.Position)) {
-						mechanism.TriggerFunc();
+			} else {
+				foreach (var entity in GameMgr.Inst.Grid.Entities_ReadOnly.Values) {
+					if (entity is IMechanism mechanism) {
+						if (!GameMgr.Inst.Grid.IsWalkable(mechanism.Position)) {
+							mechanism.TriggerFunc();
+						}
 					}
 				}
+				AfterTick?.Invoke();
 			}
-			AfterTick?.Invoke();
 			AfterTick = null;
 		}
 	}
