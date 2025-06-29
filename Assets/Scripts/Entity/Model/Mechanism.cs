@@ -39,6 +39,13 @@ namespace GameLogic {
 				foreach (XmlNode config in overrideConfig) {
 					var res = new MechanismLevelConfig(config);
 					_config.OverrideLevelConfig(res);
+
+					if (GID == "12") {
+						foreach (var positoin in res.MoveActions) {
+							Debug.Log($"Override Mechanism {GID} MoveAction: {positoin}");
+						}
+					}
+
 				}
 			}
 
@@ -50,7 +57,7 @@ namespace GameLogic {
 		/// 该方法会从配置管理器中获取默认的机关配置，并设置
 		/// </summary>
 		private void LoadDefaulConfig() {
-			_config = MechanismConfigMgr.Inst.GetMechanismConfig(TypeID);
+			_config = new(MechanismConfigMgr.Inst.GetMechanismConfig(TypeID));
 			IsBlock = _config.IsBlock;
 			IsBlockLight = _config.IsBlockLight;
 			TypeID = _config.TypeID;
@@ -106,6 +113,10 @@ namespace GameLogic {
 			_curLevel = level;
 			DetectRange = new(_config.MechanismLevels[_curLevel].DetectRange);
 			DetectRange.Rotate(DirectionExtensions.GetRotation(Direction.Up, CurDrct));
+			_waitCnt = 0;
+			_rotateCnt = 0;
+			_moveCnt = 0;
+			_detectCnt = 0;
 		}
 
 		public void LogicDestroy() {
@@ -155,6 +166,7 @@ namespace GameLogic {
 		private bool Move(GridPosition delta) {
 			if (delta.X == 0 && delta.Y == 0) return true;
 			Position += delta;
+			Debug.Log($"Mechanism {GID} move to {Position} with delta {delta}");
 			OnPositionChanged?.Invoke(Position);
 			return true;
 		}

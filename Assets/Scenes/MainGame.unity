@@ -193,7 +193,7 @@ MonoBehaviour:
   - o_02
   - o_03
   - o_04
-  _currentLevelIndex: 2
+  _currentLevelIndex: 1
   _gridView: {fileID: 1807148794}
 --- !u!114 &52017105
 MonoBehaviour:

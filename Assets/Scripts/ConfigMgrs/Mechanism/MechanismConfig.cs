@@ -130,7 +130,7 @@ namespace GameLogic {
 			}
 			
 
-			var jumpNode = root.SelectSingleNode("IsJump");
+			var jumpNode = root.SelectSingleNode("Jump");
 			if (jumpNode != null) {
 				IsJump = true;
 				Jump_Param_Wait = int.Parse(jumpNode.SelectSingleNode("Wait").InnerText);
