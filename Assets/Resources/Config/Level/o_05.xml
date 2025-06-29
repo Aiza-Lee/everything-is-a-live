@@ -282,14 +282,14 @@
 				<MoveLogic>0</MoveLogic>
 				<RotateLogic>0</RotateLogic>
 			    </Action>
-				<!-- <Function type="order">
-					<Targets>
-						<Target>
-							<GID>24</GID>
-							<Level>2</Level>
-						</Target>
-					</Targets>
-				</Function> -->
+				<Function type = "oneorder">
+				<Targets>
+					<Target>
+						<GID>41</GID>
+						<Level>2</Level>
+					</Target>
+				</Targets>
+				</Function>
 			</LevelConfig>
 		</LevelConfigs>
 	</Mechanism>
@@ -332,6 +332,27 @@
 				<MoveLogic>0</MoveLogic>
 				<RotateLogic>0</RotateLogic>
 			    </Action>
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>41</GID>
+		<ID>water_dispenser</ID>
+		<GridPosition x="24" y="7" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level="2">
+				<DetectRange>
+				</DetectRange>
+				<Action>
+				<MoveLogic>U</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+			    </Action>
+				<Jump>
+					<Wait>1</Wait>
+					<Target>1</Target>
+				</Jump>	
 			</LevelConfig>
 		</LevelConfigs>
 	</Mechanism>
