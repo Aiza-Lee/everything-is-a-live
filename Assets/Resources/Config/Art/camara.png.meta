@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9c8a6ae1996f471408ccd16c07b56dd0
+guid: 62079f64dfd4d5a43864965e2cea159a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1095141833252711340
-    second: key_0
+      213: 3496205160357251136
+    second: camara_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: key_0
+      name: camara_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 249
-        width: 770
-        height: 544
+        x: 273
+        y: 222
+        width: 587
+        height: 1290
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: caba2bde1b9b23f00800000000000000
-      internalID: 1095141833252711340
+      spriteID: 0484bf4d114058030800000000000000
+      internalID: 3496205160357251136
       vertices: []
       indices: 
       edges: []
@@ -157,7 +157,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      key_0: 1095141833252711340
+      camara_0: 3496205160357251136
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

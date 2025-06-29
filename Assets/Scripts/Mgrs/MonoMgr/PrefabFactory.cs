@@ -45,6 +45,8 @@ namespace GameLogic {
 			entity.SetEntity(mechanism);
 			if (mechanism.TypeID != "Wall" && mechanism.TypeID != "Curtain") {
 				entity.GetComponent<SpriteRenderer>().sprite = GetSprite(mechanism);
+			} else {
+				entity.GetComponent<SpriteRenderer>().sprite = _mechanismSprites.Find(x => x.Key == "square").Value;;
 			}
 			return entity;
 		}

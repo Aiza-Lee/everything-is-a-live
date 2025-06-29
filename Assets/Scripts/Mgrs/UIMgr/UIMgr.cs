@@ -18,7 +18,7 @@ namespace GameLogic {
 		protected override void Awake() {
 			base.Awake();
 			foreach (var panel in _RegisteredPanels) {
-				panel.gameObject.SetActive(true);
+				// panel.gameObject.SetActive(true);
 				_panelDict[panel.GetType()] = panel;
 			}
 		}

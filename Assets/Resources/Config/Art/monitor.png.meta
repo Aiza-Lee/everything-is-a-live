@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1024
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -252,7 +252,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      monitor_0: 6864705659591406222
+      monitor_1: -3417607063087646462
+      monitor_2: 1807344774621437631
+      monitor_3: 5461445652213762030
+      monitor_4: 6148751797447312015
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
