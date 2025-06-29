@@ -2,8 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameLogic
-{
+namespace GameLogic {
 	public abstract class SmoothChangeBase<T> : MonoBehaviour where T : struct {
 		abstract public T GetCurVal();
 		abstract protected void SetCurVal_Derived(T val);

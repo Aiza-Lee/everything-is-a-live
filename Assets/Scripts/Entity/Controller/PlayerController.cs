@@ -11,6 +11,7 @@ namespace GameLogic {
 			}
 		}
 		private void Update() {
+			bool tryedMove = true;
 			if (Input.GetKeyDown(KeyCode.A)) {
 				_player.Move(Direction.Left);
 			} else if (Input.GetKeyDown(KeyCode.D)) {
@@ -19,6 +20,11 @@ namespace GameLogic {
 				_player.Move(Direction.Up);
 			} else if (Input.GetKeyDown(KeyCode.S)) {
 				_player.Move(Direction.Down);
+			} else {
+				tryedMove = false;
+			}
+			if (tryedMove) {
+				PlayerCameraMgr.Inst.SetPosition(new Vector2(_player.Position.X, _player.Position.Y));
 			}
 		}
 	}

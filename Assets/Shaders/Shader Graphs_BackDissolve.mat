@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_BackFlyLight
-  m_Shader: {fileID: -6465566751694194690, guid: 72f6c895f955c7744a45305946719fb6, type: 3}
+  m_Name: Shader Graphs_BackDissolve
+  m_Shader: {fileID: -6465566751694194690, guid: 21d51c0cef4abbb4dbfb0054ba85a45b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -42,21 +42,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Bloom: 1
-    - _Emission: 5
-    - _Fluctuation: 1
-    - _LineCount: 30
-    - _LineRepeat: 2
-    - _LineWidth: 2
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 0.5
-    - _TrailLength: 0.1
-    m_Colors:
-    - _Color: {r: 0, g: 1, b: 0.95260924, a: 0}
+    m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &5077360721670016591
+--- !u!114 &1042536153807324437
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
