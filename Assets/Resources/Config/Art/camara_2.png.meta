@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 8464350d786cd9f41993eb018205428c
+guid: e07540e630dcc9a4d854b5fc1d2224ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5739897283171119737
-    second: fridge_0
+      213: -6479844730513556865
+    second: camara_2_0
+  - first:
+      213: -6952425455700341777
+    second: camara_2_1
+  - first:
+      213: 2743436716133523266
+    second: camara_2_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fridge_0
+      name: camara_2_0
       rect:
         serializedVersion: 2
-        x: 114
-        y: 395
-        width: 773
-        height: 1072
+        x: 964
+        y: 1633
+        width: 8
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +146,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 972f4a2fa2638af40800000000000000
-      internalID: 5739897283171119737
+      spriteID: f7a7d0e9c87f216a0800000000000000
+      internalID: -6479844730513556865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camara_2_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 72
+        width: 888
+        height: 1555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb099132e5048f90800000000000000
+      internalID: -6952425455700341777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: camara_2_2
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1620
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f17e07825a21620800000000000000
+      internalID: 2743436716133523266
       vertices: []
       indices: 
       edges: []
@@ -157,7 +205,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fridge_0: 5739897283171119737
+      camara_2_0: -6479844730513556865
+      camara_2_1: -6952425455700341777
+      camara_2_2: 2743436716133523266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

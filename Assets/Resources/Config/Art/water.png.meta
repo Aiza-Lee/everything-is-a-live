@@ -129,12 +129,12 @@ TextureImporter:
       name: water_0
       rect:
         serializedVersion: 2
-        x: 282
+        x: 0
         y: 0
-        width: 646
-        height: 1565
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1024
+        height: 2048
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2bc05773c4913a44ca875de1c3636709
     internalID: 0
     vertices: []
     indices: 

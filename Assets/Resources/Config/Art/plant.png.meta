@@ -129,12 +129,12 @@ TextureImporter:
       name: plant_0
       rect:
         serializedVersion: 2
-        x: 189
-        y: 312
-        width: 663
-        height: 1018
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 1024
+        height: 2048
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d3aafd6eae559cb48922c068d38e180f
     internalID: 0
     vertices: []
     indices: 

@@ -185,6 +185,16 @@ MonoBehaviour:
     Value: {fileID: 8756457212138747365, guid: f047606d63426df458f1470d2a33796d, type: 3}
   - Key: water
     Value: {fileID: 8509550459451208454, guid: 07bf207cfb9729444983785a608303ad, type: 3}
+  - Key: key
+    Value: {fileID: 1095141833252711340, guid: 9c8a6ae1996f471408ccd16c07b56dd0, type: 3}
+  - Key: camara
+    Value: {fileID: 3496205160357251136, guid: 62079f64dfd4d5a43864965e2cea159a, type: 3}
+  - Key: people
+    Value: {fileID: 7079939810118749161, guid: bc7e5caa1c36fe54d8bb716353c2654a, type: 3}
+  - Key: plant
+    Value: {fileID: 8591533231565066105, guid: 9ba65476782b6a443957d14711e852f8, type: 3}
+  - Key: screen
+    Value: {fileID: -1783458819082368507, guid: 96e8e7e271f026d40899f1df8f5e935e, type: 3}
   _mechanismAnimators:
   - Key: 
     Value: {fileID: 0}
@@ -193,6 +203,8 @@ MonoBehaviour:
   _groundPrefab: {fileID: 8462526493887104753, guid: 0d74b3aa7e567cf4a8e46d4f9dd3058d, type: 3}
   _lightCellPrefab: {fileID: 7829480187520219403, guid: 726752c5c285e6d4da226e0f516b080d, type: 3}
   _terminalPrefab: {fileID: 7829480187520219403, guid: 987aff4c42319c74eba6139a5c3f5753, type: 3}
+  Ground: {fileID: -3878557786174838139, guid: 0330885360cd5ca4bbe8370675941168, type: 3}
+  Player: {fileID: 4334783836991956000, guid: 92fdfe5a87846a347a99db7c231556a7, type: 3}
 --- !u!114 &52017104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,7 +877,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 21c58894ab35e995d51ef45041864b1b

@@ -21,6 +21,9 @@ namespace GameLogic {
 		[SerializeField] private GameObject _groundPrefab;
 		[SerializeField] private GameObject _lightCellPrefab;
 		[SerializeField] private GameObject _terminalPrefab;
+		[SerializeField] private Sprite Ground;
+		[SerializeField] private Sprite Player;
+
 
 
 		private void Start() {
@@ -37,6 +40,7 @@ namespace GameLogic {
 		public GroundView CreateGroundView(IGround ground) {
 			var entity = PoolSystem.PopGO<GroundView>(_groundPrefab);
 			entity.SetEntity(ground);
+			entity.GetComponent<SpriteRenderer>().sprite = Ground;
 			return entity;
 		}
 
@@ -64,6 +68,7 @@ namespace GameLogic {
 		public PlayerView CreatePlayerView(IPlayer player) {
 			var entity = PoolSystem.PopGO<PlayerView>(_playerPrefab);
 			entity.SetEntity(player);
+			entity.GetComponent<SpriteRenderer>().sprite = Player;
 			return entity;
 		}
 
