@@ -4,7 +4,7 @@
 	<Width>25</Width>
 	<Mechanism>
 		<GID>01</GID>
-		<ID>pcu_1</ID>
+		<ID>pcu_2</ID>
 		<GridPosition x="5" y="8" />
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
