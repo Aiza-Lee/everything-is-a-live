@@ -22,14 +22,18 @@ namespace GameLogic {
 			}
 			Entity = player;
 			player.OnLogicDestroy += OnLogicDestroy;
-			_smoothMove.SetTarget(new Vector3(
+			_smoothMove.SetCurVal(new Vector3(
 				entity.Position.X,
 				entity.Position.Y,
 				-0f
 			));
 			player.OnMove += OnMove;
 			_spRndr.sortingOrder = entity.GetSortingOrder();
-			PlayerCameraMgr.Inst.SetPosition(transform.position);
+			PlayerCameraMgr.Inst.SetTargetPosition(transform.position);
+			PlayerCameraMgr.Inst.SetCurPosition(new Vector2(
+				entity.Position.X,
+				entity.Position.Y
+			));
 		}
 
 		public void Tick() { }
@@ -37,6 +41,7 @@ namespace GameLogic {
 		void OnLogicDestroy() {
 			Entity = null;
 			PoolSystem.PushGO(this.gameObject);
+			// PlayerCameraMgr.Inst.Target = null;
 		}
 		void OnMove(Direction direction) {
 			if (Entity is IPlayer player) {
@@ -46,7 +51,7 @@ namespace GameLogic {
 					player.Position.Y
 				);
 				_smoothMove.SetTarget(newPosition);
-				PlayerCameraMgr.Inst.SetPosition(newPosition);
+				PlayerCameraMgr.Inst.SetTargetPosition(newPosition);
 			} else {
 				Debug.LogError("Entity is not a player");
 			}

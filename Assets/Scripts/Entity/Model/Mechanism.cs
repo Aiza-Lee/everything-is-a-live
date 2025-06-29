@@ -5,7 +5,7 @@ using UnityEngine;
 namespace GameLogic {
 	public class Mechanism : IMechanism {
 		public Range DetectRange { get; private set; } = new();
-		public bool RangeActive { get; private set; }
+		public bool RangeActive { get; private set; } = true;
 		public Direction CurDrct { get; set; }
 
 		public bool IsBlock { get; private set; }

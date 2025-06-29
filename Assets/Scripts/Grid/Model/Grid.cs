@@ -54,6 +54,7 @@ namespace GameLogic {
 			foreach (XmlNode mechanismNode in mechanismNodes) {
 				AddEntity(_entities, new Mechanism(mechanismNode));
 			}
+			CalculateMaps();
 			return true;
 		}
 

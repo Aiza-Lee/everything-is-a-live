@@ -20,6 +20,7 @@ namespace GameLogic {
 			Grid = grid;
 			grid.OnDestroy += OnModelDestroy;
 			grid.OnReCalculateMaps += OnReCalculateMaps;
+			OnReCalculateMaps();
 			foreach (var entity in grid.Entities_ReadOnly.Values) {
 				if (entity is IGround ground) {
 					PrefabFactory.Inst.CreateGroundView(ground).transform.SetParent(_GroudsParent, false);
@@ -35,7 +36,6 @@ namespace GameLogic {
 			_terminal = PrefabFactory.Inst.CreateTerminal();
 			_terminal.transform.SetParent(this.transform, false);
 			_terminal.transform.localPosition = new Vector3(GameMgr.Inst.PlayerWinPosition.X, GameMgr.Inst.PlayerWinPosition.Y, 0);
-			grid.CalculateMaps();
 		}
 
 		private void OnReCalculateMaps() {
