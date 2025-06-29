@@ -9,7 +9,7 @@
 		<LevelConfig level = "1">
 			<!--被加载到场景中的默认检测范围，具体的朝向可以在关卡的xml中旋转实现-->
 			<DetectRange>
-				<GridPosition x="-1" y="1" />
+				<!-- <GridPosition x="-1" y="1" />
 				<GridPosition x="-1" y="2" />
 				<GridPosition x="-1" y="3" />
 				<GridPosition x="-1" y="4" />
@@ -20,7 +20,7 @@
 				<GridPosition x="-3" y="1" />
 				<GridPosition x="-3" y="2" />
 				<GridPosition x="-3" y="3" />
-				<GridPosition x="-3" y="4" />
+				<GridPosition x="-3" y="4" /> -->
 				<GridPosition x="1" y="1" />
 				<GridPosition x="1" y="2" />
 				<GridPosition x="1" y="3" />
