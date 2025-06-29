@@ -193,7 +193,7 @@ MonoBehaviour:
   - o_02
   - o_03
   - o_04
-  _currentLevelIndex: 0
+  _currentLevelIndex: 2
   _gridView: {fileID: 1807148794}
 --- !u!114 &52017105
 MonoBehaviour:
@@ -307,7 +307,6 @@ Transform:
   m_Children:
   - {fileID: 619394802}
   - {fileID: 653911737}
-  - {fileID: 648639488}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &350471335
@@ -707,6 +706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9f11f25d4687e6498d00c9798f8e554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeadZoneSize: {x: 3, y: 7}
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.2
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 21c58894ab35e995d51ef45041864b1b
@@ -840,7 +840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 648639488}
   - component: {fileID: 648639489}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Global Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -855,12 +855,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648639487}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 342699154}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &648639489
 MonoBehaviour:
@@ -1412,6 +1412,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 674409002}
+  - {fileID: 648639488}
   - {fileID: 494441854}
   - {fileID: 519420032}
   - {fileID: 1294713179}
