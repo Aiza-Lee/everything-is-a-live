@@ -1,0 +1,339 @@
+<Level>
+	<ID>o_05</ID>
+	<Height>12</Height>
+	<Width>25</Width>
+	<Mechanism>
+		<GID>01</GID>
+		<ID>pcu_1</ID>
+		<GridPosition x="5" y="8" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>02</GID>
+		<ID>pcd_1</ID>
+		<GridPosition x="6" y="8" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>03</GID>
+		<ID>pcu_1</ID>
+		<GridPosition x="9" y="8" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>04</GID>
+		<ID>pcd_3</ID>
+		<GridPosition x="10" y="8" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>05</GID>
+		<ID>pcu_1</ID>
+		<GridPosition x="14" y="8" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>06</GID>
+		<ID>pcd_3</ID>
+		<GridPosition x="15" y="8" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>07</GID>
+		<ID>pcu_1</ID>
+		<GridPosition x="19" y="8" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>08</GID>
+		<ID>pcd_1</ID>
+		<GridPosition x="20" y="8" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>09</GID>
+		<ID>pcu_3</ID>
+		<GridPosition x="5" y="6" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>10</GID>
+		<ID>pcd_1</ID>
+		<GridPosition x="6" y="6" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>11</GID>
+		<ID>pcu_1</ID>
+		<GridPosition x="9" y="6" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>12</GID>
+		<ID>pcd_1</ID>
+		<GridPosition x="10" y="6" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>13</GID>
+		<ID>pcu_1</ID>
+		<GridPosition x="14" y="6" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>14</GID>
+		<ID>pcd_1</ID>
+		<GridPosition x="15" y="6" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>15</GID>
+		<ID>pcu_1</ID>
+		<GridPosition x="19" y="6" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>16</GID>
+		<ID>pcd_3</ID>
+		<GridPosition x="20" y="6" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>17</GID>
+		<ID>monitor_5</ID>
+		<GridPosition x="2" y="10" />
+		<InitRotate>S</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>18</GID>
+		<ID>monitor_5</ID>
+		<GridPosition x="24" y="9" />
+		<InitRotate>N</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>19</GID>
+		<ID>camara_3</ID>
+		<GridPosition x="5" y="2" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>20</GID>
+		<ID>camara_2</ID>
+		<GridPosition x="14" y="2" />
+		<InitRotate>Y</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>21</GID>
+		<ID>camara_4</ID>
+		<GridPosition x="22" y="11" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>22</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="8" y="10" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>23</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="9" y="10" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>24</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="12" y="10" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>25</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="1" y="10" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>26</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="17" y="10" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>27</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="18" y="10" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>28</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="10" y="3" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>29</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="11" y="3" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>30</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="21" y="3" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>31</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="22" y="3" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>32</GID>
+		<ID>water_dispenser</ID>
+		<GridPosition x="9" y="3" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>33</GID>
+		<ID>water_dispenser</ID>
+		<GridPosition x="12" y="7" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>34</GID>
+		<ID>printer</ID>
+		<GridPosition x="17" y="7" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>35</GID>
+		<ID>bin</ID>
+		<GridPosition x="2" y="3" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>36</GID>
+		<ID>screen_2</ID>
+		<GridPosition x="20" y="3" />
+		<InitRotate>S</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>37</GID>
+		<ID>screen_2</ID>
+		<GridPosition x="11" y="10" />
+		<InitRotate>S</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>38</GID>
+		<ID>bin</ID>
+		<GridPosition x="7" y="10" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>39</GID>
+		<ID>key</ID>
+		<GridPosition x="8" y="11" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level="1">
+				<DetectRange>
+				</DetectRange>
+				<Action>
+				<MoveLogic>0</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+			    </Action>
+				<!-- <Function type="order">
+					<Targets>
+						<Target>
+							<GID>24</GID>
+							<Level>2</Level>
+						</Target>
+					</Targets>
+				</Function> -->
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>40</GID>
+		<ID>manager</ID>
+		<GridPosition x="5" y="9" />
+		<InitRotate>S</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level = "1">
+			<DetectRange>
+				<GridPosition x="-1" y="1" />
+				<GridPosition x="0" y="1" />
+				<GridPosition x="1" y="1" />
+				<GridPosition x="-1" y="2" />
+				<GridPosition x="0" y="2" />
+				<GridPosition x="1" y="2" />
+			</DetectRange>
+			<Action>
+				<MoveLogic>0,L,L,L,D,D,D,D,L,L,L,L,L,U,U,U,U,L,L,L,D,D,D,D,L,L,L,L,L,U,U,L</MoveLogic>
+				<RotateLogic>0,0,0,0,S,0,0,0,N,0,0,0,0,N,0,0,0,S,0,0,S,0,0,0,N,0,0,0,0,N,0,S</RotateLogic>
+				<DetectLogic>1</DetectLogic>
+			</Action>
+			<Jump>
+					<Wait>32</Wait>
+					<Target>2</Target>
+				</Jump>	
+		</LevelConfig>
+			<LevelConfig level="2">
+				<DetectRange>
+				<GridPosition x="-1" y="1" />
+				<GridPosition x="0" y="1" />
+				<GridPosition x="1" y="1" />
+				<GridPosition x="-1" y="2" />
+				<GridPosition x="0" y="2" />
+				<GridPosition x="1" y="2" />
+				</DetectRange>
+				<Action>
+				<MoveLogic>0</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+			    </Action>
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+
+</Level>

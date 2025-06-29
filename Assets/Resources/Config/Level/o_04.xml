@@ -183,6 +183,23 @@
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 		<LevelConfigs>
+			<LevelConfig level = "1">
+			<DetectRange>
+				<GridPosition x="-1" y="1" />
+				<GridPosition x="0" y="1" />
+				<GridPosition x="1" y="1" />
+				<GridPosition x="-1" y="2" />
+				<GridPosition x="0" y="2" />
+				<GridPosition x="1" y="2" />
+				<GridPosition x="2" y="1" />
+				<GridPosition x="2" y="2" />
+			</DetectRange>
+			<Action>
+				<MoveLogic>0</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+				<DetectLogic>1</DetectLogic>
+			</Action>
+		</LevelConfig>
 			<LevelConfig level="2">
 				<DetectRange>
 				<GridPosition x="-1" y="1" />
