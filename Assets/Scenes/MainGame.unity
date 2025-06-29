@@ -169,6 +169,20 @@ MonoBehaviour:
   _mechanismSprites:
   - Key: temp
     Value: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  - Key: bin
+    Value: {fileID: -5868093129598958763, guid: 1658bbc3d4f4f3448848082017156df1, type: 3}
+  - Key: cab
+    Value: {fileID: -2953107965179639783, guid: f573e892b975b7f498b37073226fed5c, type: 3}
+  - Key: key
+    Value: {fileID: 1095141833252711340, guid: 9c8a6ae1996f471408ccd16c07b56dd0, type: 3}
+  - Key: monitor
+    Value: {fileID: 6864705659591406222, guid: d32d0f2e4fcfc454bb03ab430f3cee5b, type: 3}
+  - Key: plant
+    Value: {fileID: 8591533231565066105, guid: 9ba65476782b6a443957d14711e852f8, type: 3}
+  - Key: printer
+    Value: {fileID: 8756457212138747365, guid: f047606d63426df458f1470d2a33796d, type: 3}
+  - Key: water
+    Value: {fileID: 8509550459451208454, guid: 07bf207cfb9729444983785a608303ad, type: 3}
   _mechanismAnimators:
   - Key: 
     Value: {fileID: 0}

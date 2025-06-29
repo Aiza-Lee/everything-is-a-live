@@ -44,9 +44,19 @@ namespace GameLogic {
 			var entity = PoolSystem.PopGO<MechanismView>(_mechanismPrefab);
 			entity.SetEntity(mechanism);
 			if (mechanism.TypeID != "Wall" && mechanism.TypeID != "Curtain") {
-				entity.GetComponent<SpriteRenderer>().sprite = _mechanismSprites.Find(x => x.Key == "temp").Value;
+				entity.GetComponent<SpriteRenderer>().sprite = GetSprite(mechanism);
 			}
 			return entity;
+		}
+
+		private Sprite GetSprite(IMechanism mechanism) {
+			var tarType = mechanism.TypeID.Trim().Split('_')[0];
+			var pair = _mechanismSprites.Find(x => x.Key == tarType);
+			if (pair.Key == null) {
+				return _mechanismSprites.Find(x => x.Key == "temp").Value;
+			} else {
+				return pair.Value;
+			}
 		}
 
 		public PlayerView CreatePlayerView(IPlayer player) {

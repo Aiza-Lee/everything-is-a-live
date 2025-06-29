@@ -22,7 +22,7 @@ namespace GameLogic {
 			var files = Resources.LoadAll<TextAsset>("Config/Mechanism/");
 			foreach (var file in files) {
 				// if (!file.name.EndsWith(".xml")) continue;
-				// Debug.Log($"MechanismConfigMgr: Loading XML from {file.name}");
+				Debug.Log($"MechanismConfigMgr: Loading XML from {file.name}");
 				var doc = new System.Xml.XmlDocument();
 				doc.LoadXml(file.text);
 				var root = doc.DocumentElement;
