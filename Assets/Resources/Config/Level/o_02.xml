@@ -1,50 +1,123 @@
 <Level>
 	<ID>o_02</ID>
-	<Height>8</Height>
+	<Height>9</Height>
 	<Width>16</Width>
 	<Mechanism>
 		<GID>01</GID>
 		<ID>monitor_1</ID>
-		<GridPosition x="8" y="7" />
+		<GridPosition x="7" y="8" />
 		<!--默认机关都是朝上的，匹配在机关配置中写的检测范围，这里的旋转就是初始化关卡调整朝向用的-->
-		<InitRotate>X</InitRotate>
+		<InitRotate>SS</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
 
 	<Mechanism>
 		<GID>02</GID>
-		<ID>pc_001L</ID>
-		<GridPosition x="6" y="2" />
-		<InitRotate>0</InitRotate>
+		<ID>cab_1</ID>
+		<GridPosition x="6" y="6" />
+		<InitRotate>SS</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
 	<Mechanism>
 		<GID>03</GID>
-		<ID>pc_001R</ID>
-		<GridPosition x="6" y="3" />
-		<InitRotate>0</InitRotate>
+		<ID>cab_1</ID>
+		<GridPosition x="7" y="6" />
+		<InitRotate>SS</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
 	<Mechanism>
 		<GID>04</GID>
 		<ID>cab_1</ID>
-		<GridPosition x="7" y="5" />
-		<InitRotate>0</InitRotate>
+		<GridPosition x="8" y="6" />
+		<InitRotate>SS</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
 	<Mechanism>
 		<GID>05</GID>
 		<ID>cab_1</ID>
-		<GridPosition x="7" y="6" />
-		<InitRotate>0</InitRotate>
+		<GridPosition x="7" y="3" />
+		<InitRotate>SS</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
 	<Mechanism>
 		<GID>06</GID>
 		<ID>cab_1</ID>
-		<GridPosition x="7" y="7" />
-		<InitRotate>0</InitRotate>
+		<GridPosition x="8" y="3" />
+		<InitRotate>SS</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
-
+	<Mechanism>
+		<GID>07</GID>
+		<ID>water_dispenser</ID>
+		<GridPosition x="13" y="8" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>08</GID>
+		<ID>printer</ID>
+		<GridPosition x="14" y="8" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>09</GID>
+		<ID>monitor_4</ID>
+		<GridPosition x="15" y="3" />
+		<InitRotate>N</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>10</GID>
+		<ID>bin</ID>
+		<GridPosition x="6" y="3" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>11</GID>
+		<ID>people_3</ID>
+		<GridPosition x="4" y="4" />
+		<!--默认机关都是朝上的，匹配在机关配置中写的检测范围，这里的旋转就是初始化关卡调整朝向用的-->
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level="1">
+				<DetectRange>
+				<GridPosition x="-1" y="1" />
+				<GridPosition x="0" y="1" />
+				<GridPosition x="1" y="1" />
+				<GridPosition x="0" y="2" />
+			</DetectRange>
+			<Action>
+				<MoveLogic type="Loop">R,R,R,R,R,D,D,L,L,L,L,L,U,U</MoveLogic>
+				<RotateLogic type="Loop">S,0,0,0,0,S,0,S,0,0,0,0,S,0,S</RotateLogic>
+				<DetectLogic>1</DetectLogic>
+			</Action>
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>12</GID>
+		<ID>people_3</ID>
+		<GridPosition x="13" y="3" />
+		<!--默认机关都是朝上的，匹配在机关配置中写的检测范围，这里的旋转就是初始化关卡调整朝向用的-->
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level="1">
+				<DetectRange>
+				<GridPosition x="-1" y="1" />
+				<GridPosition x="0" y="1" />
+				<GridPosition x="1" y="1" />
+				<GridPosition x="0" y="2" />
+			</DetectRange>
+			<Action>
+				<MoveLogic type="Loop">U,U,U,U,0,R,D,D,D,D,L</MoveLogic>
+				<RotateLogic type="Loop">0,0,0,0,S,0,S,0,0,0,SS</RotateLogic>
+				<DetectLogic>1</DetectLogic>
+			</Action>
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
 </Level>
