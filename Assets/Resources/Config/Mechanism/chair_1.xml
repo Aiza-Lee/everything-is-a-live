@@ -1,0 +1,23 @@
+<Mechanism>
+	<!--需要唯一ID，不一定是这个格式-->
+	<ID>chair_1</ID>
+	<Name>朝上的椅子</Name>
+	<!--是否阻碍玩家运动-->
+	<IsBlock>true</IsBlock>
+	<IsBlockLight>false</IsBlockLight>
+	<LevelConfigs>
+		<LevelConfig level = "1">
+			<!--被加载到场景中的默认检测范围，具体的朝向可以在关卡的xml中旋转实现-->
+			<DetectRange>
+				<GridPosition x="0" y="1" />
+				<GridPosition x="0" y="2" />
+			</DetectRange>
+			<Action>
+				<MoveLogic>0</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+				<DetectLogic>1</DetectLogic>
+			</Action>
+		</LevelConfig>
+	</LevelConfigs>
+
+</Mechanism>
