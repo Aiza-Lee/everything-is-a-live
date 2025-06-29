@@ -27,21 +27,21 @@
 	</Mechanism>
 	<Mechanism>
 		<GID>04</GID>
-		<ID>cab_001</ID>
+		<ID>cab_1</ID>
 		<GridPosition x="7" y="5" />
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
 	<Mechanism>
 		<GID>05</GID>
-		<ID>cab_001</ID>
+		<ID>cab_1</ID>
 		<GridPosition x="7" y="6" />
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
 	<Mechanism>
 		<GID>06</GID>
-		<ID>cab_001</ID>
+		<ID>cab_1</ID>
 		<GridPosition x="7" y="7" />
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>

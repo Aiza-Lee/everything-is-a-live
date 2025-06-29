@@ -19,8 +19,8 @@
 	</Mechanism>
 	<Mechanism>
 		<GID>03</GID>
-		<ID>pcd_2</ID>
-		<GridPosition x="5" y="7" />
+		<ID>pcd_3</ID>
+		<GridPosition x="6" y="3" />
 		<InitRotate>X</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
@@ -33,8 +33,8 @@
 	</Mechanism>
 	<Mechanism>
 		<GID>05</GID>
-		<ID>pcd_2</ID>
-		<GridPosition x="8" y="7" />
+		<ID>pcd_1</ID>
+		<GridPosition x="9" y="3" />
 		<InitRotate>X</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
@@ -47,8 +47,8 @@
 	</Mechanism>
 	<Mechanism>
 		<GID>07</GID>
-		<ID>pcd_1</ID>
-		<GridPosition x="11" y="7" />
+		<ID>pcd_3</ID>
+		<GridPosition x="12" y="3" />
 		<InitRotate>X</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
@@ -61,66 +61,170 @@
 	</Mechanism>
 	<Mechanism>
 		<GID>09</GID>
-		<ID>pcd_2</ID>
-		<GridPosition x="6" y="4" />
+		<ID>pcd_1</ID>
+		<GridPosition x="15" y="3" />
 		<InitRotate>X</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
 	<Mechanism>
 		<GID>10</GID>
-		<ID>pcu_2</ID>
-		<GridPosition x="9" y="4" />
+		<ID>pcu_3</ID>
+		<GridPosition x="4" y="9" />
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
 	<Mechanism>
 		<GID>11</GID>
-		<ID>pcd_1</ID>
-		<GridPosition x="10" y="4" />
+		<ID>pcd_3</ID>
+		<GridPosition x="5" y="9" />
 		<InitRotate>X</InitRotate>
 		<InitLevel>1</InitLevel>
 	</Mechanism>
 	<Mechanism>
 		<GID>12</GID>
-		<ID>people</ID>
-		<GridPosition x="13" y="4" />
+		<ID>pcu_3</ID>
+		<GridPosition x="8" y="9" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>13</GID>
+		<ID>pcd_1</ID>
+		<GridPosition x="9" y="9" />
 		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>14</GID>
+		<ID>screen_1</ID>
+		<GridPosition x="7" y="6" />
+		<InitRotate>X</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>15</GID>
+		<ID>water_dispenser</ID>
+		<GridPosition x="8" y="6" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>16</GID>
+		<ID>printer</ID>
+		<GridPosition x="12" y="6" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level="1">
+				<DetectRange>
+				</DetectRange>
+				<Action>
+				<MoveLogic>0</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+			    </Action>
+				<Function type="order">
+					<Targets>
+						<Target>
+							<GID>21</GID>
+							<Level>2</Level>
+						</Target>
+						<Target>
+							<GID>20</GID>
+							<Level>2</Level>
+						</Target>
+					</Targets>
+				</Function>
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>17</GID>
+		<ID>screen_2</ID>
+		<GridPosition x="13" y="6" />
+		<InitRotate>S</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>18</GID>
+		<ID>water_dispenser</ID>
+		<GridPosition x="17" y="5" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>19</GID>
+		<ID>rod</ID>
+		<GridPosition x="17" y="2" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level="1">
+				<DetectRange>
+				</DetectRange>
+				<Action>
+				<MoveLogic>0</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+			    </Action>
+				<Function type="order">
+					<Targets>
+						<Target>
+							<GID>24</GID>
+							<Level>2</Level>
+						</Target>
+					</Targets>
+				</Function>
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>20</GID>
+		<ID>people_2</ID>
+		<GridPosition x="16" y="7" />
+		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 		<LevelConfigs>
 			<LevelConfig level="2">
 				<DetectRange>
+				<GridPosition x="-1" y="1" />
 				<GridPosition x="0" y="1" />
+				<GridPosition x="1" y="1" />
+				<GridPosition x="-1" y="2" />
 				<GridPosition x="0" y="2" />
+				<GridPosition x="1" y="2" />
 				</DetectRange>
 				<Action>
-				<MoveLogic>U,U,U,U</MoveLogic>
-				<RotateLogic>0,0,0,X</RotateLogic>
+				<MoveLogic>D,D</MoveLogic>
+				<RotateLogic>SS,0</RotateLogic>
 			    </Action>
 				<Jump>
-					<Wait>4</Wait>
+					<Wait>2</Wait>
 					<Target>1</Target>
 				</Jump>	
 			</LevelConfig>
 		</LevelConfigs>
 	</Mechanism>
 	<Mechanism>
-		<GID>13</GID>
-		<ID>people</ID>
-		<GridPosition x="13" y="3" />
-		<InitRotate>0</InitRotate>
+		<GID>21</GID>
+		<ID>people_2</ID>
+		<GridPosition x="16" y="9" />
+		<InitRotate>SS</InitRotate>
 		<InitLevel>1</InitLevel>
 		<LevelConfigs>
 			<LevelConfig level="2">
 				<DetectRange>
+				<GridPosition x="-1" y="1" />
 				<GridPosition x="0" y="1" />
+				<GridPosition x="1" y="1" />
+				<GridPosition x="-1" y="2" />
 				<GridPosition x="0" y="2" />
+				<GridPosition x="1" y="2" />
 				</DetectRange>
 				<Action>
-				<MoveLogic>L,U,U,L,U,L,L,L</MoveLogic>
-				<RotateLogic>N,R,0,N,R,N,0,0</RotateLogic>
+				<MoveLogic>L,L,L,L,D,D</MoveLogic>
+				<RotateLogic>S,0,0,0,N,0</RotateLogic>
 			    </Action>
 				<Jump>
-					<Wait>8</Wait>
+					<Wait>6</Wait>
 					<Target>3</Target>
 				</Jump>	
 			</LevelConfig>
@@ -135,39 +239,34 @@
 		</LevelConfigs>
 	</Mechanism>
 	<Mechanism>
-		<GID>14</GID>
-		<ID>printer</ID>
-		<GridPosition x="13" y="9" />
+		<GID>22</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="14" y="10" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>23</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="15" y="10" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>24</GID>
+		<ID>monitor_3</ID>
+		<GridPosition x="21" y="8" />
 		<InitRotate>0</InitRotate>
 		<InitLevel>1</InitLevel>
 		<LevelConfigs>
-			<LevelConfig level="1">
+			<LevelConfig level="2">
 				<DetectRange>
 				</DetectRange>
 				<Action>
 				<MoveLogic>0</MoveLogic>
 				<RotateLogic>0</RotateLogic>
 			    </Action>
-				<Function type="order">
-					<Targets>
-						<Target>
-							<GID>12</GID>
-							<level>2</level>
-						</Target>
-						<Target>
-							<GID>13</GID>
-							<level>2</level>
-						</Target>
-					</Targets>
-				</Function>
 			</LevelConfig>
 		</LevelConfigs>
-	</Mechanism>
-	<Mechanism>
-		<GID>15</GID>
-		<ID>water_dispenser</ID>
-		<GridPosition x="6" y="9" />
-		<InitRotate>0</InitRotate>
-		<InitLevel>1</InitLevel>
 	</Mechanism>
 </Level>

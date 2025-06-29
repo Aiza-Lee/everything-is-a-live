@@ -14,7 +14,7 @@
 				<RotateLogic>0</RotateLogic>
 				<DetectLogic>0</DetectLogic>
 			</Action>
-			<Function type= "water">使周围八格洒水,在上面进行双倍移动</Function>
+			<!-- <Function type= "water">使周围八格洒水,在上面进行双倍移动</Function> -->
 		</LevelConfig>
 	</LevelConfigs>
 
