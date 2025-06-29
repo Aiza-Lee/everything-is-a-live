@@ -1,0 +1,279 @@
+<Level>
+	<ID>o_06</ID>
+	<Height>10</Height>
+	<Width>18</Width>
+	<Mechanism>
+		<GID>01</GID>
+		<ID>chair_1</ID>
+		<GridPosition x="6" y="2" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>02</GID>
+		<ID>chair_1</ID>
+		<GridPosition x="7" y="2" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>03</GID>
+		<ID>chair_2</ID>
+		<GridPosition x="6" y="6" />
+		<InitRotate>N</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level = "2">
+			<DetectRange>
+				<GridPosition x="0" y="1" />
+			</DetectRange>
+			<Action>
+				<MoveLogic>R,U,U,R</MoveLogic>
+				<RotateLogic>SS,N,0,S</RotateLogic>
+				<DetectLogic>1</DetectLogic>
+			</Action>
+			<Jump>
+					<Wait>4</Wait>
+					<Target>3</Target>
+				</Jump>	
+		</LevelConfig>
+		<LevelConfig level="3">
+				<DetectRange>
+					<GridPosition x="0" y="1" />
+				</DetectRange>
+				<Action>
+				<MoveLogic>0</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+			    </Action>
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>04</GID>
+		<ID>chair_2</ID>
+		<GridPosition x="6" y="7" />
+		<InitRotate>N</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>05</GID>
+		<ID>chair_2</ID>
+		<GridPosition x="3" y="7" />
+		<InitRotate>S</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>06</GID>
+		<ID>chair_2</ID>
+		<GridPosition x="3" y="6" />
+		<InitRotate>S</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>07</GID>
+		<ID>table_2</ID>
+		<GridPosition x="4" y="6" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>08</GID>
+		<ID>table_2</ID>
+		<GridPosition x="5" y="6" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>09</GID>
+		<ID>table_1</ID>
+		<GridPosition x="4" y="7" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>10</GID>
+		<ID>table_1</ID>
+		<GridPosition x="4" y="8" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>11</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="4" y="9" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>12</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="5" y="9" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>13</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="9" y="9" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>14</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="10" y="9" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>15</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="14" y="9" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>16</GID>
+		<ID>cab_1</ID>
+		<GridPosition x="15" y="9" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>17</GID>
+		<ID>couch_1</ID>
+		<GridPosition x="14" y="5" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>18</GID>
+		<ID>couch_1</ID>
+		<GridPosition x="15" y="5" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>19</GID>
+		<ID>fridge</ID>
+		<GridPosition x="7" y="9" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>20</GID>
+		<ID>bin</ID>
+		<GridPosition x="9" y="7" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>21</GID>
+		<ID>tv_2</ID>
+		<GridPosition x="14" y="7" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>22</GID>
+		<ID>tv_1</ID>
+		<GridPosition x="15" y="7" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+	</Mechanism>
+	<Mechanism>
+		<GID>23</GID>
+		<ID>plant</ID>
+		<GridPosition x="2" y="8" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level = "1">
+			<DetectRange>
+				<GridPosition x="0" y="1" />
+				<GridPosition x="1" y="0" />
+				<GridPosition x="-1" y="0" />
+			</DetectRange>
+			<Action>
+				<MoveLogic>R,R,R,R,R,D,D,D,L,L,L,L,L,U,U,U</MoveLogic>
+				<RotateLogic>S,0,0,0,0,S,0,0,S,0,0,0,0,S,0,0</RotateLogic>
+				<DetectLogic>1</DetectLogic>
+			</Action>
+		</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>24</GID>
+		<ID>plant</ID>
+		<GridPosition x="17" y="2" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level = "1">
+			<DetectRange>
+				<GridPosition x="0" y="1" />
+				<GridPosition x="0" y="2" />
+			</DetectRange>
+			<Action>
+				<MoveLogic>L,L,L,L,L,R,R,R,R,R</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+				<DetectLogic>1</DetectLogic>
+			</Action>
+		</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>25</GID>
+		<ID>conditioner</ID>
+		<GridPosition x="13" y="9" />
+		<InitRotate>SS</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level = "2">
+			<DetectRange>
+				<GridPosition x="0" y="1" />
+				<GridPosition x="0" y="2" />
+				<GridPosition x="0" y="3" />
+				<GridPosition x="0" y="4" />
+				<GridPosition x="0" y="5" />
+				<GridPosition x="0" y="6" />
+			</DetectRange>
+			<Action>
+				<MoveLogic>0</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+				<DetectLogic>0,1,1,0,0,0,1,0,0,0,1</DetectLogic>
+			</Action>
+		</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+	<Mechanism>
+		<GID>26</GID>
+		<ID>key</ID>
+		<GridPosition x="9" y="8" />
+		<InitRotate>0</InitRotate>
+		<InitLevel>1</InitLevel>
+		<LevelConfigs>
+			<LevelConfig level="1">
+				<DetectRange>
+				</DetectRange>
+				<Action>
+				<MoveLogic>0</MoveLogic>
+				<RotateLogic>0</RotateLogic>
+			    </Action>
+				<Function type = "oneorder">
+				<Targets>
+					<Target>
+						<GID>3</GID>
+						<Level>2</Level>
+					</Target>
+					<Target>
+						<GID>25</GID>
+						<Level>2</Level>
+					</Target>
+				</Targets>
+				</Function>
+			</LevelConfig>
+		</LevelConfigs>
+	</Mechanism>
+
+</Level>
