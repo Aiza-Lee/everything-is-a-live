@@ -193,7 +193,8 @@ MonoBehaviour:
   - o_02
   - o_03
   - o_04
-  _currentLevelIndex: 2
+  - o_05
+  _currentLevelIndex: 4
   _gridView: {fileID: 1807148794}
 --- !u!114 &52017105
 MonoBehaviour:
@@ -414,7 +415,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.22404169, g: 0.40251565, b: 0.35152307, a: 0}
+  m_BackGroundColor: {r: 0.42138356, g: 0.42138356, b: 0.42138356, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1165,8 +1166,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 251658239
-  m_fontColor: {r: 0, g: 0, b: 0, a: 0.05490196}
+    rgba: 3053453312
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.7137255}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1189,7 +1190,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

@@ -105,8 +105,6 @@ namespace GameLogic {
 			} else if (_config.MechanismLevels[_curLevel].FuncType == FunctionType.Water) {
 				// Todo: Water mechanism logic can be implemented here
 				Debug.Log($"Water mechanism {GID} triggered.");
-			} else {
-				Debug.LogError($"Mechanism {GID} has no valid function to trigger.");
 			}
 		}
 		private void SetMechanismLevel(string target, string level) {
