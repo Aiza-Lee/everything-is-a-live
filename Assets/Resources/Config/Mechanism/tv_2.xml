@@ -16,7 +16,7 @@
 				<GridPosition x="1" y="2" />
 				<GridPosition x="1" y="3" />
 				<GridPosition x="2" y="1" />
-				<GridPosition x="-" y="2" />
+				<GridPosition x="2" y="2" />
 				<GridPosition x="2" y="3" />
 			</DetectRange>
 			<Action>
