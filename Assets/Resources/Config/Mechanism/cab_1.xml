@@ -1,6 +1,6 @@
 <Mechanism>
 	<!--需要唯一ID，不一定是这个格式-->
-	<ID>cab_001</ID>
+	<ID>cab_1</ID>
 	<Name>办公柜</Name>
 	<!--是否阻碍玩家运动-->
 	<IsBlock>true</IsBlock>
