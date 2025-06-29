@@ -310,7 +310,7 @@
 				<GridPosition x="1" y="2" />
 			</DetectRange>
 			<Action>
-				<MoveLogic>0,L,L,L,D,D,D,D,L,L,L,L,L,U,U,U,U,L,L,L,D,D,D,D,L,L,L,L,L,U,U,L</MoveLogic>
+				<MoveLogic>0,R,R,R,D,D,D,D,R,R,R,R,R,U,U,U,U,R,R,R,D,D,D,D,R,R,R,R,R,U,U,R</MoveLogic>
 				<RotateLogic>0,0,0,0,S,0,0,0,N,0,0,0,0,N,0,0,0,S,0,0,S,0,0,0,N,0,0,0,0,N,0,S</RotateLogic>
 				<DetectLogic>1</DetectLogic>
 			</Action>
