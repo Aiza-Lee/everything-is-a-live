@@ -94,6 +94,19 @@ namespace GameLogic {
 				for (int i = 0; i < target.Count; i++) {
 					SetMechanismLevel(target[i], level[i]);
 				}
+			} else if (_config.MechanismLevels[_curLevel].FuncType == FunctionType.OneOrder) {
+				var levelConfig = _config.MechanismLevels[_curLevel];
+				var target = levelConfig.Order_Param_Target;
+				var level = levelConfig.Order_Param_Level;
+				for (int i = 0; i < target.Count; i++) {
+					SetMechanismLevel(target[i], level[i]);
+				}
+				GameMgr.Inst.Grid.KillEntity(GID); // Destroy itself after one-time order
+			} else if (_config.MechanismLevels[_curLevel].FuncType == FunctionType.Water) {
+				// Todo: Water mechanism logic can be implemented here
+				Debug.Log($"Water mechanism {GID} triggered.");
+			} else {
+				Debug.LogError($"Mechanism {GID} has no valid function to trigger.");
 			}
 		}
 		private void SetMechanismLevel(string target, string level) {
